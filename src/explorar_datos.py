@@ -68,7 +68,7 @@ revision = pd.read_excel(
     rutas[0],
     sheet_name="No_Fetales_2019",
     header=0,
-    usecols=["AÑO","MES", "SEXO","GRUPO_EDAD1","COD_MUERTE","MANERA_MUERTE"],
+    usecols=["AÑO","MES", "SEXO","GRUPO_EDAD1","COD_MUERTE","MANERA_MUERTE","COD_DEPARTAMENTO",],
     dtype=str,
     keep_default_na=False,
     engine="openpyxl",
@@ -106,3 +106,56 @@ print(revision_x95["COD_MUERTE"].value_counts(dropna=False))
 
 print("MANERA_MUERTE en esas filas:")
 print(revision_x95["MANERA_MUERTE"].value_counts(dropna=False))
+
+print("\nRegistros de 2019 por código de departamento:")
+
+revision_2019 = revision[revision["AÑO"] == "2019"]
+conteo_departamento = (
+    revision_2019["COD_DEPARTAMENTO"]
+    .value_counts(dropna=False)
+    .sort_index()
+)
+
+print(conteo_departamento.to_string())
+print("Total contado:", conteo_departamento.sum())
+print(
+    "Códigos observados:",
+    sorted(revision_2019["COD_DEPARTAMENTO"].unique()),
+)
+
+divipola = pd.read_excel(
+    rutas[2],
+    sheet_name="Hoja1",
+    usecols=["COD_DEPARTAMENTO", "DEPARTAMENTO"],
+    dtype=str,
+    keep_default_na=False,
+    engine="openpyxl",
+)
+
+# Una pareja código/nombre puede repetirse por los municipios de Divipola.
+pares_departamento = divipola.drop_duplicates().sort_values("COD_DEPARTAMENTO")
+
+print("\nCódigos y nombres de departamento en Divipola:")
+print(pares_departamento.to_string(index=False))
+
+tabla_conteos = conteo_departamento.reset_index(name="CASOS")
+
+# Cada código contado debe corresponder a un único nombre.
+resumen_departamental = tabla_conteos.merge(
+    pares_departamento,
+    on="COD_DEPARTAMENTO",
+    how="left",
+    validate="one_to_one",
+)
+
+print("\nResumen departamental con nombres:")
+print(resumen_departamental.to_string(index=False))
+
+print("Filas antes:", len(tabla_conteos))
+print("Filas después:", len(resumen_departamental))
+print("Total antes:", tabla_conteos["CASOS"].sum())
+print("Total después:", resumen_departamental["CASOS"].sum())
+print(
+    "Códigos sin nombre:",
+    resumen_departamental["DEPARTAMENTO"].isna().sum(),
+)

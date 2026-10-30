@@ -1,15 +1,38 @@
+import json
 from pathlib import Path
 
 import plotly.express as px
 from dash import Dash, dcc, html
 
-from src.datos import cargar_resumen_mensual
+from src.datos import (
+    cargar_mortalidad_2019,
+    resumir_por_mes,
+    resumir_por_departamento,
+)
+from src.graficos import crear_mapa_departamental
 
-# Localiza los datos desde este archivo, sin depender de la terminal.
+# Localiza las entradas desde este archivo, sin depender de la terminal.
 raiz = Path(__file__).resolve().parent
 ruta_excel = raiz / "data" / "raw" / "Anexo1.NoFetal2019_CE_15-03-23.xlsx"
+ruta_divipola = raiz / "data" / "raw" / "Divipola_CE_.xlsx"
+ruta_limites = raiz / "data" / "geo" / "departamentos_mgn_2018.geojson"
 
-mensual = cargar_resumen_mensual(ruta_excel)
+datos = cargar_mortalidad_2019(ruta_excel)
+mensual = resumir_por_mes(datos)
+departamental = resumir_por_departamento(datos, ruta_divipola)
+
+# Reutiliza la cartografía descargada al iniciar la aplicación.
+limites = json.loads(ruta_limites.read_text(encoding="utf-8"))
+mapa = crear_mapa_departamental(departamental, limites)
+
+print("\nResumen departamental preparado por la aplicación:")
+print(departamental.to_string(index=False))
+print("Filas departamentales:", len(departamental))
+print("Total departamental:", departamental["CASOS"].sum())
+print(
+    "Códigos sin nombre:",
+    departamental["DEPARTAMENTO"].isna().sum(),
+)
 
 figura = px.line(
     mensual,
@@ -35,7 +58,14 @@ total_formateado = f"{mensual['CASOS'].sum():,}".replace(",", ".")
 app.layout = [
     html.H1("Mortalidad en Colombia, 2019"),
     html.P(f"Filas representadas: {total_formateado}"),
+    html.H2("Registros por mes"),
     dcc.Graph(figure=figura),
+    html.H2("Registros por departamento, 2019"),
+    html.P(
+        "Agrupación territorial de los anexos de clase. "
+        "Cartografía: DANE MGN 2018, simplificada."
+    ),
+    dcc.Graph(figure=mapa),
 ]
 
 if __name__ == "__main__":
