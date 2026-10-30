@@ -77,3 +77,50 @@ def crear_mapa_departamental(resumen, limites):
         hovertemplate="%{hovertext}<br>Registros: %{z:,.0f}<extra></extra>"
     )
     return figura
+
+
+def crear_barras_sexo_departamento(resumen):
+    """Devuelve barras apiladas de registros por departamento y sexo.
+
+    Espera las columnas DEPARTAMENTO, SEXO_NOMBRE y CASOS.
+    Conserva los conteos absolutos y la categoría Indeterminado.
+    """
+    # La orientación horizontal facilita leer los nombres departamentales.
+    figura = px.bar(
+        resumen,
+        x="CASOS",
+        y="DEPARTAMENTO",
+        color="SEXO_NOMBRE",
+        orientation="h",
+        barmode="stack",
+        category_orders={
+            "SEXO_NOMBRE": ["Masculino", "Femenino", "Indeterminado"]
+        },
+        color_discrete_map={
+            "Masculino": "#3B82F6",
+            "Femenino": "#F59E0B",
+            "Indeterminado": "#64748B",
+        },
+        custom_data=["SEXO_NOMBRE"],
+        labels={
+            "CASOS": "Registros",
+            "DEPARTAMENTO": "Departamento",
+            "SEXO_NOMBRE": "Sexo",
+        },
+    )
+
+    # Coloca los mayores totales arriba para facilitar la comparación.
+    figura.update_yaxes(categoryorder="total ascending", automargin=True)
+    figura.update_xaxes(tickformat=",.0f", rangemode="tozero")
+    figura.update_layout(
+        separators=",.",
+        height=1050,
+        legend={"orientation": "h", "x": 0, "y": 1.02},
+    )
+    figura.update_traces(
+        hovertemplate=(
+            "%{y}<br>Sexo: %{customdata[0]}<br>"
+            "Registros: %{x:,.0f}<extra></extra>"
+        )
+    )
+    return figura

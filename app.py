@@ -8,8 +8,12 @@ from src.datos import (
     cargar_mortalidad_2019,
     resumir_por_mes,
     resumir_por_departamento,
+    resumir_por_departamento_y_sexo,
 )
-from src.graficos import crear_mapa_departamental
+from src.graficos import (
+    crear_barras_sexo_departamento,
+    crear_mapa_departamental,
+)
 
 # Localiza las entradas desde este archivo, sin depender de la terminal.
 raiz = Path(__file__).resolve().parent
@@ -20,6 +24,21 @@ ruta_limites = raiz / "data" / "geo" / "departamentos_mgn_2018.geojson"
 datos = cargar_mortalidad_2019(ruta_excel)
 mensual = resumir_por_mes(datos)
 departamental = resumir_por_departamento(datos, ruta_divipola)
+sexo_departamental = resumir_por_departamento_y_sexo(datos, departamental)
+barras_sexo = crear_barras_sexo_departamento(sexo_departamental)
+
+print("\nTotales por sexo desde la aplicación:")
+print(sexo_departamental.groupby("SEXO")["CASOS"].sum().to_string())
+print("Total de la tabla por sexo:", sexo_departamental["CASOS"].sum())
+
+sumas_por_departamento = (
+    sexo_departamental.groupby("COD_DEPARTAMENTO")["CASOS"].sum()
+)
+referencia_departamental = departamental.set_index("COD_DEPARTAMENTO")["CASOS"]
+print(
+    "Coinciden los totales departamentales:",
+    sumas_por_departamento.equals(referencia_departamental),
+)
 
 # Reutiliza la cartografía descargada al iniciar la aplicación.
 limites = json.loads(ruta_limites.read_text(encoding="utf-8"))
@@ -66,6 +85,8 @@ app.layout = [
         "Cartografía: DANE MGN 2018, simplificada."
     ),
     dcc.Graph(figure=mapa),
+    html.H2("Registros por sexo y departamento, 2019"),
+    dcc.Graph(figure=barras_sexo),
 ]
 
 if __name__ == "__main__":

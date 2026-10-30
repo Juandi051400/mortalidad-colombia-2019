@@ -159,3 +159,26 @@ print(
     "Códigos sin nombre:",
     resumen_departamental["DEPARTAMENTO"].isna().sum(),
 )
+
+# Prepara las cantidades que formarán los segmentos de cada barra.
+conteo_departamento_sexo = (
+    revision_2019.groupby(["COD_DEPARTAMENTO", "SEXO"], dropna=False)
+    .size()
+    .reset_index(name="CASOS")
+)
+
+print("\nMuestra del conteo por departamento y sexo:")
+print(conteo_departamento_sexo.head(10).to_string(index=False))
+
+print("\nTotales por sexo después de agrupar:")
+print(conteo_departamento_sexo.groupby("SEXO")["CASOS"].sum().to_string())
+print("Total de la tabla:", conteo_departamento_sexo["CASOS"].sum())
+
+# Comprueba que cada departamento conserve su total ya validado.
+sumas_por_departamento = (
+    conteo_departamento_sexo.groupby("COD_DEPARTAMENTO")["CASOS"].sum()
+)
+print(
+    "Coincide con los totales departamentales:",
+    sumas_por_departamento.equals(conteo_departamento),
+)

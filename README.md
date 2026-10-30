@@ -10,7 +10,7 @@ Explorar la mortalidad en Colombia durante 2019 mediante visualizaciones de su d
 
 ## Estado del proyecto
 
-En desarrollo. La aplicación local muestra la evolución mensual y un mapa por departamento de los registros de 2019. Ambas vistas representan 244.355 registros. Están pendientes las otras cinco vistas y el despliegue público.
+En desarrollo. La aplicación local muestra tres vistas de los registros de 2019: evolución mensual, mapa departamental y barras apiladas por sexo y departamento. Cada vista representa 244.355 registros. Se conservan los 93 registros de sexo indeterminado. Están pendientes las otras cuatro vistas y el despliegue público.
 
 ## Entorno de desarrollo
 
@@ -19,8 +19,8 @@ Python 3.14.0. Las versiones de los paquetes están registradas en requirements.
 ## Estructura actual
 
 - `app.py`: conexión de los datos y las figuras con la interfaz de Dash.
-- `src/datos.py`: lectura de mortalidad y preparación de los resúmenes mensual y departamental.
-- `src/graficos.py`: construcción del mapa y adaptación de la cartografía para Plotly.
+- `src/datos.py`: lectura de mortalidad y preparación de los resúmenes mensual, departamental y por departamento y sexo.
+- `src/graficos.py`: construcción del mapa y las barras apiladas por sexo, con adaptación de la cartografía para Plotly.
 - `src/descargar_geografia.py`: descarga y comprobación de los límites departamentales.
 - `src/explorar_datos.py`: exploración de hojas, categorías, conteos y correspondencias.
 - `data/geo/`: cartografía departamental del DANE, versión 2018, descargada con simplificación.
