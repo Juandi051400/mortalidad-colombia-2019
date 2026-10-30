@@ -68,7 +68,17 @@ revision = pd.read_excel(
     rutas[0],
     sheet_name="No_Fetales_2019",
     header=0,
-    usecols=["AÑO","MES", "SEXO","GRUPO_EDAD1","COD_MUERTE","MANERA_MUERTE","COD_DEPARTAMENTO",],
+    usecols=[
+        "AÑO",
+        "MES",
+        "SEXO",
+        "GRUPO_EDAD1",
+        "COD_MUERTE",
+        "MANERA_MUERTE",
+        "COD_DEPARTAMENTO",
+        "COD_DANE",
+        "COD_MUNICIPIO",
+    ],
     dtype=str,
     keep_default_na=False,
     engine="openpyxl",
@@ -230,3 +240,278 @@ print(
     conteos_edad["Edad desconocida"] == edad_desconocida_original,
 )
 
+# Inspecciona los códigos completos antes de elegir una clave del catálogo.
+codigos_muerte = revision_2019["COD_MUERTE"]
+print("\nLongitudes de COD_MUERTE:")
+print(codigos_muerte.str.len().value_counts().sort_index().to_string())
+print("Códigos vacíos en la base:", codigos_muerte.eq("").sum())
+
+conteo_causas = codigos_muerte.value_counts(dropna=False)
+print("\nDiez códigos de muerte más frecuentes:")
+print(conteo_causas.head(10).to_string())
+print("Total contado por código:", conteo_causas.sum())
+
+# El encabezado del catálogo está en la fila 9 de Excel: header=8.
+catalogo_causas = pd.read_excel(
+    rutas[1],
+    sheet_name="Final",
+    header=8,
+    dtype=str,
+    keep_default_na=False,
+    engine="openpyxl",
+)
+print("\nColumnas del catálogo:")
+print(catalogo_causas.columns.tolist())
+
+# Revisa ambas claves antes de decidir cómo unir códigos con nombres.
+for columna in [
+    "Código de la CIE-10 tres caracteres",
+    "Código de la CIE-10 cuatro caracteres",
+]:
+    codigos_catalogo = catalogo_causas[columna]
+    codigos_no_vacios = codigos_catalogo[codigos_catalogo != ""]
+    print("\nClave del catálogo:", columna)
+    print("Filas del catálogo:", len(catalogo_causas))
+    print("Códigos vacíos:", codigos_catalogo.eq("").sum())
+    print("Longitudes de códigos no vacíos:")
+    print(codigos_no_vacios.str.len().value_counts().sort_index().to_string())
+    print(
+        "Filas con código repetido (sin vacíos):",
+        codigos_no_vacios.duplicated(keep=False).sum(),
+    )
+
+# Inspecciona la longitud excepcional antes de decidir cómo unir el catálogo.
+codigos_detallados = catalogo_causas["Código de la CIE-10 cuatro caracteres"]
+es_codigo_de_cinco = codigos_detallados.str.len() == 5
+fila_codigo_de_cinco = catalogo_causas[es_codigo_de_cinco]
+
+print("\nEntrada de cinco caracteres del catálogo:")
+print(fila_codigo_de_cinco.to_string(index=False))
+
+# Revela los caracteres antes de decidir si el código requiere una transformación.
+for codigo in fila_codigo_de_cinco["Código de la CIE-10 cuatro caracteres"]:
+    print("Código exacto:", repr(codigo))
+    print("Caracteres:", list(codigo))
+
+# Comprueba cambios y posibles claves repetidas antes de unir nombres.
+codigos_detallados_limpios = codigos_detallados.str.strip()
+cambiaron = codigos_detallados != codigos_detallados_limpios
+repetidos = codigos_detallados_limpios.duplicated(keep=False)
+
+print("\nCódigos modificados:", cambiaron.sum())
+print("Filas con código repetido después:", repetidos.sum())
+
+# Detecta códigos de tres caracteres asociados con distintas descripciones.
+clave_tres = "Código de la CIE-10 tres caracteres"
+descripcion_tres = "Descripción  de códigos mortalidad a tres caracteres"
+nombres_por_codigo = (
+    catalogo_causas.groupby(clave_tres)[descripcion_tres].nunique(dropna=False)
+)
+conflictos = nombres_por_codigo[nombres_por_codigo > 1]
+
+print("\nCódigos con varias descripciones:", len(conflictos))
+print(conflictos.to_string())
+
+# Muestra las variantes textuales antes de decidir cómo resolverlas.
+for codigo in conflictos.index:
+    filas_codigo = catalogo_causas[catalogo_causas[clave_tres] == codigo]
+    print("\nCódigo:", codigo)
+    for descripcion in filas_codigo[descripcion_tres].unique():
+        print(repr(descripcion))
+
+# Unifica las variantes observadas de coma (T81) y n/ñ (X16).
+etiquetas_elegidas = {
+    "T81": "Complicaciones De Procedimientos, No Clasificadas En Otra Parte",
+    "X16": "Contacto Con Radiadores, Cañerias Y Artefactos Para Calefaccion, Calientes",
+}
+
+# Conserva el texto original para los códigos sin etiqueta elegida.
+descripciones_revisadas = catalogo_causas[clave_tres].map(etiquetas_elegidas)
+descripciones_revisadas = descripciones_revisadas.fillna(
+    catalogo_causas[descripcion_tres]
+)
+
+revision_nombres = descripciones_revisadas.groupby(
+    catalogo_causas[clave_tres]
+).nunique(dropna=False)
+print("\nCódigos con varias descripciones después:", (revision_nombres > 1).sum())
+
+# Comprueba por separado ausencias y textos sin contenido en ambos niveles.
+descripcion_cuatro = "Descripcion  de códigos mortalidad a cuatro caracteres"
+descripciones_detalladas = catalogo_causas[descripcion_cuatro]
+vacias_tres = descripciones_revisadas.str.strip().eq("")
+vacias_cuatro = descripciones_detalladas.str.strip().eq("")
+
+print("\nAusentes (tres caracteres):", descripciones_revisadas.isna().sum())
+print("En blanco (tres caracteres):", vacias_tres.sum())
+print("Ausentes (cuatro caracteres):", descripciones_detalladas.isna().sum())
+print("En blanco (cuatro caracteres):", vacias_cuatro.sum())
+
+# Comprueba cada código completo contra el nivel correspondiente del catálogo.
+codigos_tres_base = codigos_muerte[codigos_muerte.str.len() == 3]
+codigos_cuatro_base = codigos_muerte[codigos_muerte.str.len() == 4]
+
+sin_catalogo_tres = codigos_tres_base[
+    ~codigos_tres_base.isin(catalogo_causas[clave_tres])
+]
+sin_catalogo_cuatro = codigos_cuatro_base[
+    ~codigos_cuatro_base.isin(codigos_detallados_limpios)
+]
+
+print("\nRegistros sin correspondencia (tres):", len(sin_catalogo_tres))
+print("Registros sin correspondencia (cuatro):", len(sin_catalogo_cuatro))
+
+# Verifica la relación del catálogo antes de agrupar causas a tres caracteres.
+categorias_por_prefijo = codigos_detallados_limpios.str[:3]
+diferencias_categoria = categorias_por_prefijo != catalogo_causas[clave_tres]
+print("\nCategorías distintas del prefijo:", diferencias_categoria.sum())
+
+# Inspecciona ambas clasificaciones antes de decidir cómo agrupar las causas.
+columnas_revision = [
+    clave_tres,
+    descripcion_tres,
+    "Código de la CIE-10 cuatro caracteres",
+    descripcion_cuatro,
+]
+discrepancias_catalogo = catalogo_causas.loc[diferencias_categoria, columnas_revision]
+print("\nCorrespondencias del catálogo distintas del prefijo:")
+print(discrepancias_catalogo.to_string(index=False))
+
+# Cuantifica el efecto de las cinco correspondencias I70/I69 del anexo.
+codigos_en_revision = codigos_detallados_limpios[diferencias_categoria]
+registros_en_revision = codigos_muerte[codigos_muerte.isin(codigos_en_revision)]
+print("\nRegistros con los cinco códigos revisados:", len(registros_en_revision))
+print(registros_en_revision.value_counts().to_string())
+
+# Fuente: https://ais.paho.org/classifications/chapters/CAP09.html
+# Corrige solo las cinco correspondencias I70 contrastadas con la OPS.
+codigos_i70 = ["I700", "I701", "I702", "I708", "I709"]
+filas_i70 = codigos_detallados_limpios.isin(codigos_i70)
+categorias_revisadas = catalogo_causas[clave_tres].copy()
+nombres_categorias = descripciones_revisadas.copy()
+categorias_revisadas.loc[filas_i70] = "I70"
+nombres_categorias.loc[filas_i70] = "Aterosclerosis"
+
+diferencias_restantes = categorias_revisadas != categorias_por_prefijo
+print("\nDiferencias de categoría después:", diferencias_restantes.sum())
+
+# Reúne categorías y nombres revisados para la consulta posterior.
+catalogo_categorias = pd.DataFrame({
+    "COD_CAUSA": categorias_revisadas,
+    "CAUSA": nombres_categorias,
+})
+
+catalogo_categorias = catalogo_categorias.drop_duplicates()
+categorias_repetidas = catalogo_categorias["COD_CAUSA"].duplicated(keep=False)
+print("\nFilas con categoría repetida:", categorias_repetidas.sum())
+print("Categorías del catálogo:", len(catalogo_categorias))
+print(catalogo_categorias.head(3).to_string(index=False))
+
+# Agrupa a tres caracteres tras validar y corregir la relación del catálogo.
+categorias_base = codigos_muerte.str[:3]
+sin_categoria = categorias_base[
+    ~categorias_base.isin(catalogo_categorias["COD_CAUSA"])
+]
+conteo_categorias = categorias_base.value_counts(dropna=False)
+
+print("\nRegistros sin correspondencia de categoría:", len(sin_categoria))
+print("Total contado por categoría:", conteo_categorias.sum())
+print("Coincide con la base:", conteo_categorias.sum() == len(codigos_muerte))
+print(conteo_categorias.head(10).to_string())
+
+# Prepara columnas de código y casos para añadir los nombres posteriormente.
+tabla_conteos_causas = (
+    conteo_categorias.rename_axis("COD_CAUSA").reset_index(name="CASOS")
+)
+print("\nConteo convertido en tabla:")
+print(tabla_conteos_causas.head(3).to_string(index=False))
+print("Categorías observadas:", len(tabla_conteos_causas))
+print("Total de casos:", tabla_conteos_causas["CASOS"].sum())
+
+# Añade nombres mediante una correspondencia única por categoría.
+resumen_causas = tabla_conteos_causas.merge(
+    catalogo_categorias,
+    on="COD_CAUSA",
+    how="left",
+    validate="one_to_one",
+)
+
+print("\nFilas antes:", len(tabla_conteos_causas))
+print("Filas después:", len(resumen_causas))
+print("Total después:", resumen_causas["CASOS"].sum())
+print("Categorías sin nombre:", resumen_causas["CAUSA"].isna().sum())
+print(resumen_causas.head(10).to_string(index=False))
+
+# Lee las claves municipales y sus nombres sin modificar los originales.
+divipola_municipal = pd.read_excel(
+    rutas[2],
+    sheet_name="Hoja1",
+    usecols=[
+        "COD_DANE", "COD_DEPARTAMENTO", "DEPARTAMENTO",
+        "COD_MUNICIPIO", "MUNICIPIO",
+    ],
+    dtype=str,
+    keep_default_na=False,
+    engine="openpyxl",
+)
+
+
+def inspeccionar_claves_municipales(tabla, origen):
+    """Muestra el formato y la coherencia de las claves sin modificarlas."""
+    columnas = ["COD_DANE", "COD_DEPARTAMENTO", "COD_MUNICIPIO"]
+    print(f"\nClaves municipales en {origen}:")
+    print(tabla[columnas].head(3).to_string(index=False))
+
+    for columna in columnas:
+        codigos = tabla[columna]
+        print(f"\nLongitudes de {columna}:")
+        print(codigos.str.len().value_counts(dropna=False).sort_index())
+        print("Vacíos o espacios:", (codigos.str.strip() == "").sum())
+
+    compuesta = tabla["COD_DEPARTAMENTO"] + tabla["COD_MUNICIPIO"]
+    print(
+        "Diferencias frente a departamento + municipio:",
+        (tabla["COD_DANE"] != compuesta).sum(),
+    )
+
+
+inspeccionar_claves_municipales(revision_2019, "mortalidad 2019")
+inspeccionar_claves_municipales(divipola_municipal, "Divipola")
+
+print("\nFilas del catálogo con COD_DANE repetido:")
+print(divipola_municipal["COD_DANE"].duplicated(keep=False).sum())
+
+print("\nCobertura en Divipola (True = código encontrado):")
+en_catalogo = revision_2019["COD_DANE"].isin(divipola_municipal["COD_DANE"])
+print(en_catalogo.value_counts(dropna=False).to_string())
+
+# Selecciona X95 y sus subcódigos únicamente en los registros de 2019.
+es_x95_2019 = revision_2019["COD_MUERTE"].str.startswith("X95", na=False)
+registros_x95_2019 = revision_2019[es_x95_2019]
+
+conteo_x95_municipal = (
+    registros_x95_2019["COD_DANE"]
+    .value_counts(dropna=False)
+    .rename_axis("COD_DANE")
+    .reset_index(name="CASOS")
+)
+
+# Añade nombres por la clave completa, conservando el orden del conteo.
+resumen_x95_municipal = conteo_x95_municipal.merge(
+    divipola_municipal[["COD_DANE", "DEPARTAMENTO", "MUNICIPIO"]],
+    on="COD_DANE",
+    how="left",
+    validate="one_to_one",
+)
+
+nombres_x95 = resumen_x95_municipal["MUNICIPIO"].fillna("").str.strip()
+
+print("\nCinco municipios con más registros X95:")
+print(resumen_x95_municipal.head(5).to_string(index=False))
+print("Registros X95:", len(registros_x95_2019))
+print("Total contado:", resumen_x95_municipal["CASOS"].sum())
+print(
+    "Total conservado:",
+    resumen_x95_municipal["CASOS"].sum() == len(registros_x95_2019),
+)
+print("Municipios sin nombre:", (nombres_x95 == "").sum())

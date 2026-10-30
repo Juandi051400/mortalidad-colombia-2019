@@ -3,7 +3,7 @@
 from copy import deepcopy
 
 import plotly.express as px
-
+import plotly.graph_objects as go
 
 def orientar_limites_para_plotly(limites):
     """Adapta una copia de los anillos departamentales a la convención de D3."""
@@ -157,5 +157,120 @@ def crear_distribucion_edad(resumen):
         textposition="outside",
         cliponaxis=False,
         hovertemplate="Grupo: %{x}<br>Registros: %{y:,.0f}<extra></extra>",
+    )
+    return figura
+
+
+def crear_tabla_causas(resumen):
+    """Muestra las diez categorías CIE-10 con más registros.
+
+    Recibe el resumen ordenado por CASOS de mayor a menor.
+    Formatea las cantidades solo para su presentación.
+    """
+    principales = resumen.head(10)
+
+    # Conserva CASOS numérico y prepara el texto con puntos de miles.
+    casos_texto = principales["CASOS"].map("{:,}".format)
+    casos_texto = casos_texto.str.replace(",", ".", regex=False)
+
+    tabla = go.Table(
+        columnwidth=[1, 7, 2],
+        header={
+            "values": ["Código", "Causa", "Casos"],
+            "fill_color": "#2563EB",
+            "font": {"color": "white", "size": 14},
+            "align": ["left", "left", "right"],
+            "height": 34,
+        },
+        cells={
+            "values": [
+                principales["COD_CAUSA"],
+                principales["CAUSA"],
+                casos_texto,
+            ],
+            "align": ["left", "left", "right"],
+            "font": {"size": 12},
+            "height": 44,
+        },
+    )
+    figura = go.Figure(data=[tabla])
+    figura.update_layout(
+        height=550,
+        margin={"l": 10, "r": 10, "t": 10, "b": 10},
+    )
+    return figura
+
+
+def crear_barras_x95(resumen):
+    """Dibuja los cinco mayores conteos municipales de X95.
+
+    Recibe el resumen X95 ordenado por CASOS de mayor a menor.
+    Identifica cada municipio junto con su departamento.
+    """
+    principales = resumen.head(5).copy()
+
+    # Distingue municipios homónimos sin modificar el resumen original.
+    principales["LUGAR"] = (
+        principales["MUNICIPIO"] + " (" + principales["DEPARTAMENTO"] + ")"
+    )
+
+    figura = px.bar(
+        principales,
+        x="CASOS",
+        y="LUGAR",
+        orientation="h",
+        custom_data=["COD_DANE"],
+        text_auto=",.0f",
+        color_discrete_sequence=["#2563EB"],
+        labels={"CASOS": "Casos X95", "LUGAR": "Municipio"},
+    )
+    figura.update_yaxes(categoryorder="total ascending", automargin=True)
+    figura.update_xaxes(tickformat=",.0f", rangemode="tozero")
+    figura.update_layout(separators=",.", height=450)
+    figura.update_traces(
+        textposition="outside",
+        cliponaxis=False,
+        hovertemplate=(
+            "%{y}<br>Código DANE: %{customdata[0]}<br>"
+            "Casos X95: %{x:,.0f}<extra></extra>"
+        ),
+    )
+    return figura
+
+
+def crear_circular_menores_municipios(seleccion):
+    """Representa los conteos de los municipios seleccionados.
+
+    Los porcentajes corresponden a la suma de CASOS de esta selección.
+    """
+    tabla = seleccion.copy()
+    tabla["LUGAR"] = (
+        tabla["MUNICIPIO"] + " (" + tabla["DEPARTAMENTO"] + ")"
+    )
+
+    figura = px.pie(
+        tabla,
+        names="LUGAR",
+        values="CASOS",
+        custom_data=["COD_DANE"],
+        labels={"LUGAR": "Municipio", "CASOS": "Registros"},
+    )
+    figura.update_traces(
+        sort=False,
+        textposition="inside",
+        texttemplate="%{value}<br>%{percent:.1%}",
+        hovertemplate=(
+            "%{label}<br>Código DANE: %{customdata[0]}<br>"
+            "Registros: %{value}<br>"
+            "Porcentaje de la selección: %{percent:.1%}<extra></extra>"
+        ),
+    )
+
+    # Mantiene la selección visible para conservar el denominador indicado.
+    figura.update_layout(
+        separators=",.",
+        height=520,
+        margin={"l": 10, "r": 10, "t": 10, "b": 10},
+        legend={"itemclick": False, "itemdoubleclick": False},
     )
     return figura
