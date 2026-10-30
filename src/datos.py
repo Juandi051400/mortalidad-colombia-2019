@@ -6,8 +6,20 @@ def cargar_mortalidad_2019(ruta_excel):
     datos = pd.read_excel(
         ruta_excel,
         sheet_name="No_Fetales_2019",
-        usecols=["AÑO", "MES", "COD_DEPARTAMENTO","SEXO"],
-        dtype={"AÑO": int, "MES": int, "COD_DEPARTAMENTO": str, "SEXO": str},
+        usecols=[
+            "AÑO",
+            "MES",
+            "COD_DEPARTAMENTO",
+            "SEXO",
+            "GRUPO_EDAD1",
+        ],
+        dtype={
+            "AÑO": int,
+            "MES": int,
+            "COD_DEPARTAMENTO": str,
+            "SEXO": str,
+            "GRUPO_EDAD1": str,
+        },
         keep_default_na=False,
         engine="openpyxl",
     )
@@ -80,3 +92,41 @@ def resumir_por_departamento_y_sexo(datos, resumen_departamental):
         raise ValueError("Hay códigos departamentales sin nombre.")
 
     return resumen
+
+
+def resumir_por_grupo_edad(datos):
+    """Cuenta registros en los once grupos de edad del enunciado.
+
+    Recibe registros de 2019 con GRUPO_EDAD1 como texto, no edades en años.
+    Devuelve GRUPO_EDAD y CASOS, conservando la edad desconocida.
+    """
+    # Reproduce la clasificación docente y su orden de presentación.
+    grupos_edad = {
+        "Mortalidad neonatal": ["0", "1", "2", "3", "4"],
+        "Mortalidad infantil": ["5", "6"],
+        "Primera infancia": ["7", "8"],
+        "Niñez": ["9", "10"],
+        "Adolescencia": ["11"],
+        "Juventud": ["12", "13"],
+        "Adultez temprana": ["14", "15", "16"],
+        "Adultez intermedia": ["17", "18", "19"],
+        "Vejez": ["20", "21", "22", "23", "24"],
+        "Longevidad / Centenarios": ["25", "26", "27", "28"],
+        "Edad desconocida": ["29"],
+    }
+    etiquetas_edad = {}
+    for grupo, codigos in grupos_edad.items():
+        for codigo in codigos:
+            etiquetas_edad[codigo] = grupo
+
+    grupo_por_registro = datos["GRUPO_EDAD1"].map(etiquetas_edad)
+
+    # Impide perder registros sin clasificar al ordenar las categorías.
+    if grupo_por_registro.isna().any():
+        raise ValueError("Hay códigos de edad sin grupo. Revisa la clasificación.")
+
+    conteos_edad = grupo_por_registro.value_counts()
+
+    # Incluye las once categorías, también si alguna tiene cero registros.
+    conteos_edad = conteos_edad.reindex(list(grupos_edad), fill_value=0)
+    return conteos_edad.rename_axis("GRUPO_EDAD").reset_index(name="CASOS")

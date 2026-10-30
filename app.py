@@ -9,9 +9,11 @@ from src.datos import (
     resumir_por_mes,
     resumir_por_departamento,
     resumir_por_departamento_y_sexo,
+    resumir_por_grupo_edad,
 )
 from src.graficos import (
     crear_barras_sexo_departamento,
+    crear_distribucion_edad,
     crear_mapa_departamental,
 )
 
@@ -26,6 +28,18 @@ mensual = resumir_por_mes(datos)
 departamental = resumir_por_departamento(datos, ruta_divipola)
 sexo_departamental = resumir_por_departamento_y_sexo(datos, departamental)
 barras_sexo = crear_barras_sexo_departamento(sexo_departamental)
+
+resumen_edad = resumir_por_grupo_edad(datos)
+figura_edad = crear_distribucion_edad(resumen_edad)
+
+print("\nResumen de edad preparado por la aplicación:")
+print(resumen_edad.to_string(index=False))
+print("Grupos de edad:", len(resumen_edad))
+print("Total por edad:", resumen_edad["CASOS"].sum())
+print(
+    "Coincide con las filas leídas:",
+    resumen_edad["CASOS"].sum() == len(datos),
+)
 
 print("\nTotales por sexo desde la aplicación:")
 print(sexo_departamental.groupby("SEXO")["CASOS"].sum().to_string())
@@ -87,6 +101,12 @@ app.layout = [
     dcc.Graph(figure=mapa),
     html.H2("Registros por sexo y departamento, 2019"),
     dcc.Graph(figure=barras_sexo),
+    html.H2("Distribución por grupos de edad, 2019"),
+    html.P(
+        "Agrupación de edad definida en el enunciado. "
+        "Se incluyen los registros de edad desconocida."
+    ),
+    dcc.Graph(figure=figura_edad),
 ]
 
 if __name__ == "__main__":

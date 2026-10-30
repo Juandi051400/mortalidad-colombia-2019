@@ -124,3 +124,38 @@ def crear_barras_sexo_departamento(resumen):
         )
     )
     return figura
+
+
+def crear_distribucion_edad(resumen):
+    """Dibuja las frecuencias de los once grupos docentes de edad.
+
+    Recibe GRUPO_EDAD y CASOS, incluida la edad desconocida.
+    El eje horizontal contiene categorías, no una escala uniforme de años.
+    """
+    # Suma las frecuencias preparadas para cada categoría del enunciado.
+    figura = px.histogram(
+        resumen,
+        x="GRUPO_EDAD",
+        y="CASOS",
+        histfunc="sum",
+        orientation="v",
+        category_orders={"GRUPO_EDAD": resumen["GRUPO_EDAD"].tolist()},
+        labels={"GRUPO_EDAD": "Grupo de edad", "CASOS": "Registros"},
+        color_discrete_sequence=["#2563EB"],
+        text_auto=",.0f",
+    )
+    figura.update_xaxes(type="category", tickangle=-35, automargin=True)
+    figura.update_yaxes(
+        title_text="Registros",
+        tickformat=",.0f",
+        rangemode="tozero",
+    )
+    figura.update_layout(separators=",.", height=550, bargap=0.15)
+
+    # Permite leer también cantidades pequeñas sin alterar la escala.
+    figura.update_traces(
+        textposition="outside",
+        cliponaxis=False,
+        hovertemplate="Grupo: %{x}<br>Registros: %{y:,.0f}<extra></extra>",
+    )
+    return figura

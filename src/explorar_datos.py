@@ -182,3 +182,51 @@ print(
     "Coincide con los totales departamentales:",
     sumas_por_departamento.equals(conteo_departamento),
 )
+
+# Agrupación de GRUPO_EDAD1 exigida en el enunciado de la actividad.
+# Los valores son códigos como texto, no edades individuales en años.
+grupos_edad = {
+    "Mortalidad neonatal": ["0", "1", "2", "3", "4"],
+    "Mortalidad infantil": ["5", "6"],
+    "Primera infancia": ["7", "8"],
+    "Niñez": ["9", "10"],
+    "Adolescencia": ["11"],
+    "Juventud": ["12", "13"],
+    "Adultez temprana": ["14", "15", "16"],
+    "Adultez intermedia": ["17", "18", "19"],
+    "Vejez": ["20", "21", "22", "23", "24"],
+    "Longevidad / Centenarios": ["25", "26", "27", "28"],
+    "Edad desconocida": ["29"],
+}
+
+# Asigna a cada código el nombre de su grupo para aplicar map.
+etiquetas_edad = {}
+for grupo, codigos in grupos_edad.items():
+    for codigo in codigos:
+        etiquetas_edad[codigo] = grupo
+
+grupo_por_registro = revision_2019["GRUPO_EDAD1"].map(etiquetas_edad)
+
+# Detiene el cálculo si hay códigos sin clasificar antes de ordenar.
+if grupo_por_registro.isna().any():
+    raise ValueError("Hay códigos de edad sin grupo. Revisa la clasificación.")
+
+conteos_edad = grupo_por_registro.value_counts()
+
+# Mantiene el orden docente y muestra cero si un grupo no tiene registros.
+conteos_edad = conteos_edad.reindex(list(grupos_edad), fill_value=0)
+resumen_edad = conteos_edad.rename_axis("GRUPO_EDAD").reset_index(name="CASOS")
+
+print("\nResumen por grupos de edad:")
+print(resumen_edad.to_string(index=False))
+print("Grupos:", len(resumen_edad))
+print("Total agrupado:", resumen_edad["CASOS"].sum())
+print("Registros sin grupo:", grupo_por_registro.isna().sum())
+
+# Comprueba que el código 29 siga representado como edad desconocida.
+edad_desconocida_original = revision_2019["GRUPO_EDAD1"].eq("29").sum()
+print(
+    "Edad desconocida conservada:",
+    conteos_edad["Edad desconocida"] == edad_desconocida_original,
+)
+
