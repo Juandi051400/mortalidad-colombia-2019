@@ -10,7 +10,7 @@ Explorar la mortalidad en Colombia durante 2019 mediante visualizaciones de su d
 
 ## Estado del proyecto
 
-En desarrollo.
+En desarrollo. La aplicación local muestra la gráfica mensual de 2019 con doce meses y 244.355 registros. La lectura y el resumen mensual están separados de la pantalla. Están pendientes las otras seis vistas y el despliegue público.
 
 ## Entorno de desarrollo
 
@@ -18,9 +18,12 @@ Python 3.14.0. Las versiones de los paquetes están registradas en requirements.
 
 ## Estructura actual
 
-- `data/raw/`: copias sin modificar de los Excel de la actividad, excluidas de Git.
-- `data/processed/`: archivos derivados de la preparación de datos.
-- `src/explorar_datos.py`: inspección de hojas y muestras iniciales.
+- `app.py`: interfaz de Dash y gráfica mensual.
+- `src/datos.py`: lectura de la base y preparación del resumen mensual.
+- `src/explorar_datos.py`: exploración de hojas, categorías y conteos.
+- `data/raw/`: copias sin modificar de los Excel, excluidas de Git.
+- `data/processed/`: carpeta destinada a futuros archivos derivados.
+- `requirements.txt`: paquetes y versiones del entorno.
 
 ## Datos de entrada
 

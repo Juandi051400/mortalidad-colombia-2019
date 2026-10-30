@@ -1,25 +1,15 @@
 from pathlib import Path
 
-import pandas as pd
 import plotly.express as px
 from dash import Dash, dcc, html
+
+from src.datos import cargar_resumen_mensual
 
 # Localiza los datos desde este archivo, sin depender de la terminal.
 raiz = Path(__file__).resolve().parent
 ruta_excel = raiz / "data" / "raw" / "Anexo1.NoFetal2019_CE_15-03-23.xlsx"
 
-datos = pd.read_excel(
-    ruta_excel,
-    sheet_name="No_Fetales_2019",
-    usecols=["AÑO", "MES"],
-    dtype=int,
-    engine="openpyxl",
-)
-
-# Cuenta 2019 y ordena los meses como enteros, del 1 al 12.
-datos = datos[datos["AÑO"] == 2019]
-conteo = datos["MES"].value_counts().sort_index()
-mensual = conteo.reset_index(name="CASOS")
+mensual = cargar_resumen_mensual(ruta_excel)
 
 figura = px.line(
     mensual,
