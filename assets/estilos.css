@@ -25,3 +25,23 @@ body {
 h1, h2 {
     margin-top: 0;
 }
+
+/* Panorama general: una columna por defecto. */
+.fila-resumen {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.fila-resumen .tarjeta {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+/* Comparación mensual y territorial en ventanas amplias. */
+@media (min-width: 1200px) {
+    .fila-resumen {
+        grid-template-columns: 1fr 1fr;
+    }
+}

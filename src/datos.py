@@ -32,9 +32,15 @@ def cargar_mortalidad_2019(ruta_excel):
 
 
 def resumir_por_mes(datos):
-    """Devuelve los conteos mensuales de los registros recibidos."""
-    conteo = datos["MES"].value_counts().sort_index()
-    return conteo.reset_index(name="CASOS")
+    """Cuenta los doce meses y completa con cero los meses sin registros."""
+    meses = range(1, 13)
+
+    # Comprueba los códigos antes de completar los meses ausentes.
+    if (~datos["MES"].isin(meses)).any():
+        raise ValueError("Hay meses fuera del intervalo de 1 a 12.")
+
+    conteo = datos["MES"].value_counts().reindex(meses, fill_value=0)
+    return conteo.rename_axis("MES").reset_index(name="CASOS")
 
 def resumir_por_departamento(datos, ruta_divipola):
     """Cuenta registros por código departamental y añade su nombre."""
@@ -134,6 +140,35 @@ def resumir_por_grupo_edad(datos):
     # Incluye las once categorías, también si alguna tiene cero registros.
     conteos_edad = conteos_edad.reindex(list(grupos_edad), fill_value=0)
     return conteos_edad.rename_axis("GRUPO_EDAD").reset_index(name="CASOS")
+
+
+def resumir_para_filtro_departamental(datos, resumen_departamental):
+    """Prepara mes y edad por departamento para el filtro.
+
+    Requiere MES entero y códigos territoriales de texto.
+    El resumen departamental debe ser no vacío y tener códigos únicos.
+    Devuelve las tablas mensual y edad, conservando los grupos con cero.
+    """
+    mensuales = []
+    edades = []
+
+    for codigo in resumen_departamental["COD_DEPARTAMENTO"]:
+        seleccion = datos[datos["COD_DEPARTAMENTO"] == codigo]
+
+        # Conserva el territorio junto a sus doce conteos mensuales.
+        mensual = resumir_por_mes(seleccion)
+        mensual["COD_DEPARTAMENTO"] = codigo
+        mensuales = mensuales + [mensual]
+
+        # Reutiliza los once grupos docentes, incluida edad desconocida.
+        edad = resumir_por_grupo_edad(seleccion)
+        edad["COD_DEPARTAMENTO"] = codigo
+        edades = edades + [edad]
+
+    return {
+        "mensual": pd.concat(mensuales, ignore_index=True),
+        "edad": pd.concat(edades, ignore_index=True),
+    }
 
 
 def contar_por_categoria_causa(datos):

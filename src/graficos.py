@@ -5,6 +5,30 @@ from copy import deepcopy
 import plotly.express as px
 import plotly.graph_objects as go
 
+
+def crear_linea_mensual(resumen):
+    """Dibuja una línea con los conteos mensuales ya preparados.
+
+    Recibe MES y CASOS ordenados por mes y devuelve una figura nueva.
+    """
+    figura = px.line(
+        resumen,
+        x="MES",
+        y="CASOS",
+        markers=True,
+        labels={"MES": "Mes", "CASOS": "Registros"},
+    )
+    figura.update_xaxes(dtick=1)
+
+    # Facilita la lectura de cantidades completas en español.
+    figura.update_layout(separators=",.")
+    figura.update_yaxes(tickformat=",.0f")
+    figura.update_traces(
+        hovertemplate="Mes: %{x}<br>Registros: %{y:,.0f}<extra></extra>"
+    )
+    return figura
+
+
 def orientar_limites_para_plotly(limites):
     """Adapta una copia de los anillos departamentales a la convención de D3."""
     copia = deepcopy(limites)

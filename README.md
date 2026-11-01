@@ -14,7 +14,11 @@ En desarrollo. La aplicación local muestra siete vistas: evolución mensual, ma
 
 La base contiene 244.355 registros, incluidos 93 de sexo indeterminado y 23 de edad desconocida. Las vistas de principales causas y municipios muestran los subconjuntos indicados en sus títulos.
 
-Están pendientes la organización del dashboard, los filtros mediante callbacks, el despliegue público y la documentación final con capturas, interpretaciones e instrucciones de instalación.
+La aplicación está publicada en [Render](https://mortalidad-colombia-2019-rqso.onrender.com/). La primera versión pública muestra las siete visualizaciones.
+
+El dashboard local organiza las siete visualizaciones en tarjetas y adapta su distribución al ancho de la ventana. El selector departamental actualiza la línea mensual, la distribución por edad y su indicador; las otras cinco vistas conservan su alcance nacional y sus criterios propios.
+
+El filtro está comprobado localmente. Falta publicar y comprobar esta actualización en Render, completar la documentación con capturas, interpretaciones e instrucciones de instalación, y realizar la prueba desde una copia nueva.
 
 ## Entorno de desarrollo
 
@@ -24,12 +28,12 @@ Python 3.14.0. Las versiones de los paquetes están registradas en requirements.
 
 - `app.py`: conexión de los datos y las figuras con la interfaz de Dash.
 - `src/datos.py`: lectura de mortalidad y catálogos, validaciones, resúmenes y selección de municipios.
-- `src/graficos.py`: construcción del mapa, barras por sexo y por X95, distribución de edad, tabla de causas y circular municipal; adaptación de la cartografía para Plotly.
+- `src/graficos.py`: construcción de la línea mensual, mapa, barras por sexo y por X95, distribución de edad, tabla de causas y circular municipal; adaptación de la cartografía para Plotly.
 - `src/descargar_geografia.py`: descarga y comprobación de los límites departamentales.
 - `src/explorar_datos.py`: exploración de hojas, categorías, conteos y correspondencias.
 - `data/geo/`: cartografía departamental del DANE, versión 2018, descargada con simplificación.
 - `data/raw/`: copias sin modificar de los Excel, excluidas de Git.
-- `data/processed/`: ocho CSV estadísticos utilizados por la aplicación.
+- `data/processed/`: diez CSV estadísticos utilizados por la aplicación.
 - `src/preparar_publicacion.py`: genera los CSV desde los anexos locales y comprueba sus totales.
 - `src/datos_publicacion.py`: lee los CSV, conserva los códigos como texto y convierte las cantidades a enteros.
 - `assets/estilos.css`: estilos del encabezado y las tarjetas.
@@ -38,7 +42,7 @@ Python 3.14.0. Las versiones de los paquetes están registradas en requirements.
 
 ## Datos de entrada y reproducción
 
-La aplicación lee ocho CSV estadísticos de `data/processed/` y la cartografía de `data/geo/`. Los CSV contienen resúmenes separados para las visualizaciones y una lista de municipios de referencia.
+La aplicación lee diez CSV estadísticos de `data/processed/` y la cartografía de `data/geo/`. Los CSV contienen resúmenes separados para las visualizaciones y una lista de municipios de referencia.
 
 Para regenerar estos archivos se utilizan los tres Excel proporcionados para la actividad:
 

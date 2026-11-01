@@ -2,7 +2,7 @@
 
 Fuentes: anexos de mortalidad, causas y Divipola de la actividad.
 Reutiliza la lectura y las agrupaciones definidas en src.datos.
-Exporta conteos nacionales separados por vista, sin registros individuales.
+Exporta conteos nacionales y departamentales, sin registros individuales.
 """
 
 from pathlib import Path
@@ -17,6 +17,7 @@ from src.datos import (
     resumir_por_grupo_edad,
     resumir_por_mes,
     resumir_por_municipio,
+    resumir_para_filtro_departamental,
     seleccionar_menores_municipios,
 )
 
@@ -63,6 +64,9 @@ def preparar_publicacion():
     catalogo_categorias = cargar_catalogo_causas(ruta_catalogo)
     resumen_causas = resumir_por_causa(datos, catalogo_categorias)
 
+    # Prepara los conteos departamentales para las vistas filtrables.
+    tablas_filtro = resumir_para_filtro_departamental(datos, departamental)
+
     # Reutiliza la selección de X95 y sus subcódigos ya definida en la app.
     catalogo_municipal = cargar_catalogo_municipios(ruta_divipola)
     es_x95 = datos["COD_MUERTE"].str.startswith("X95", na=False)
@@ -92,13 +96,14 @@ def preparar_publicacion():
     municipios_sin_registros = municipios_sin_registros[
         municipios_sin_registros["COD_DANE"] != "27493"
     ]
-
     tablas = {
         "mensual_2019": resumir_por_mes(datos),
         "edad_2019": resumir_por_grupo_edad(datos),
         "departamental_2019": departamental,
         "sexo_departamental_2019": sexo_departamental,
         "causas_2019": resumen_causas,
+        "mensual_departamental_2019": tablas_filtro["mensual"],
+        "edad_departamental_2019": tablas_filtro["edad"],
     }
 
     for nombre, tabla in tablas.items():
