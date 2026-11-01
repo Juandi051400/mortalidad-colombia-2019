@@ -1,9 +1,33 @@
-"""Construye las figuras de la aplicación a partir de datos preparados."""
+"""Construye las siete figuras a partir de los resúmenes preparados.
+
+Conserva los criterios estadísticos de cada vista y comparte un tema visual.
+La interfaz controla las alturas; este módulo define datos, ejes y leyendas.
+"""
 
 from copy import deepcopy
 
 import plotly.express as px
 import plotly.graph_objects as go
+
+
+def aplicar_estilo_general(figura):
+    """Unifica la presentación sin cambiar datos ni criterios de selección.
+
+    Los ajustes particulares de cada figura se aplican después del tema.
+    Las alturas se controlan en los marcos mediante CSS y el callback
+    de Panorama, sin cambiar los datos de las figuras.
+    """
+    figura.update_layout(
+        template="plotly_white",
+        font={"family": "Arial, sans-serif", "size": 13, "color": "#243650"},
+        title={"font": {"size": 13, "color": "#486079"}, "x": 0.02},
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#ffffff",
+        separators=",.",
+        margin={"l": 32, "r": 24, "t": 48, "b": 64},
+        hoverlabel={"font": {"family": "Arial, sans-serif", "size": 13}},
+    )
+    return figura
 
 
 def crear_linea_mensual(resumen):
@@ -16,14 +40,17 @@ def crear_linea_mensual(resumen):
         x="MES",
         y="CASOS",
         markers=True,
+        color_discrete_sequence=["#2563EB"],
         labels={"MES": "Mes", "CASOS": "Registros"},
     )
+    aplicar_estilo_general(figura)
     figura.update_xaxes(dtick=1)
 
     # Facilita la lectura de cantidades completas en español.
-    figura.update_layout(separators=",.")
     figura.update_yaxes(tickformat=",.0f")
     figura.update_traces(
+        line={"width": 2.5},
+        marker={"size": 6},
         hovertemplate="Mes: %{x}<br>Registros: %{y:,.0f}<extra></extra>"
     )
     return figura
@@ -88,14 +115,13 @@ def crear_mapa_departamental(resumen, limites):
         color_continuous_scale="Blues",
         labels={"CASOS": "Registros"},
     )
+    aplicar_estilo_general(figura)
 
     # Ajusta la vista a los territorios incluidos, también los insulares.
     figura.update_geos(fitbounds="locations", visible=False)
     figura.update_layout(
-        separators=",.",
         coloraxis_colorbar={"tickformat": ",.0f"},
         margin={"l": 0, "r": 0, "t": 10, "b": 0},
-        height=600,
     )
     figura.update_traces(
         hovertemplate="%{hovertext}<br>Registros: %{z:,.0f}<extra></extra>"
@@ -122,7 +148,7 @@ def crear_barras_sexo_departamento(resumen):
         },
         color_discrete_map={
             "Masculino": "#3B82F6",
-            "Femenino": "#F59E0B",
+            "Femenino": "#0D9488",
             "Indeterminado": "#64748B",
         },
         custom_data=["SEXO_NOMBRE"],
@@ -132,13 +158,12 @@ def crear_barras_sexo_departamento(resumen):
             "SEXO_NOMBRE": "Sexo",
         },
     )
+    aplicar_estilo_general(figura)
 
     # Coloca los mayores totales arriba para facilitar la comparación.
     figura.update_yaxes(categoryorder="total ascending", automargin=True)
     figura.update_xaxes(tickformat=",.0f", rangemode="tozero")
     figura.update_layout(
-        separators=",.",
-        height=1050,
         legend={"orientation": "h", "x": 0, "y": 1.02},
     )
     figura.update_traces(
@@ -168,13 +193,14 @@ def crear_distribucion_edad(resumen):
         color_discrete_sequence=["#2563EB"],
         text_auto=",.0f",
     )
+    aplicar_estilo_general(figura)
     figura.update_xaxes(type="category", tickangle=-35, automargin=True)
     figura.update_yaxes(
         title_text="Registros",
         tickformat=",.0f",
         rangemode="tozero",
     )
-    figura.update_layout(separators=",.", height=550, bargap=0.15)
+    figura.update_layout(bargap=0.15)
 
     # Permite leer también cantidades pequeñas sin alterar la escala.
     figura.update_traces(
@@ -218,8 +244,8 @@ def crear_tabla_causas(resumen):
         },
     )
     figura = go.Figure(data=[tabla])
+    aplicar_estilo_general(figura)
     figura.update_layout(
-        height=550,
         margin={"l": 10, "r": 10, "t": 10, "b": 10},
     )
     return figura
@@ -248,9 +274,9 @@ def crear_barras_x95(resumen):
         color_discrete_sequence=["#2563EB"],
         labels={"CASOS": "Casos X95", "LUGAR": "Municipio"},
     )
+    aplicar_estilo_general(figura)
     figura.update_yaxes(categoryorder="total ascending", automargin=True)
     figura.update_xaxes(tickformat=",.0f", rangemode="tozero")
-    figura.update_layout(separators=",.", height=450)
     figura.update_traces(
         textposition="outside",
         cliponaxis=False,
@@ -279,6 +305,7 @@ def crear_circular_menores_municipios(seleccion):
         custom_data=["COD_DANE"],
         labels={"LUGAR": "Municipio", "CASOS": "Registros"},
     )
+    aplicar_estilo_general(figura)
     figura.update_traces(
         sort=False,
         textposition="inside",
@@ -292,9 +319,16 @@ def crear_circular_menores_municipios(seleccion):
 
     # Mantiene la selección visible para conservar el denominador indicado.
     figura.update_layout(
-        separators=",.",
-        height=520,
-        margin={"l": 10, "r": 10, "t": 10, "b": 10},
-        legend={"itemclick": False, "itemdoubleclick": False},
+        margin={"l": 16, "r": 16, "t": 12, "b": 120},
+        legend={
+            "orientation": "h",
+            "x": 0,
+            "y": -0.03,
+            "xanchor": "left",
+            "yanchor": "top",
+            "font": {"size": 11},
+            "itemclick": False,
+            "itemdoubleclick": False,
+        },
     )
     return figura

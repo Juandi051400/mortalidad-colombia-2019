@@ -1,3 +1,12 @@
+"""Lee los anexos de clase y prepara sus resúmenes estadísticos.
+
+La mortalidad de 2019 y los catálogos de causas y Divipola son las fuentes.
+Conserva códigos de texto y aplica las decisiones documentadas de edad,
+causas y territorios sin modificar los Excel originales.
+El preparador local utiliza estas funciones; la aplicación publicada lee
+los CSV mediante src.datos_publicacion. Los conteos no son tasas.
+"""
+
 import pandas as pd
 
 
@@ -41,6 +50,7 @@ def resumir_por_mes(datos):
 
     conteo = datos["MES"].value_counts().reindex(meses, fill_value=0)
     return conteo.rename_axis("MES").reset_index(name="CASOS")
+
 
 def resumir_por_departamento(datos, ruta_divipola):
     """Cuenta registros por código departamental y añade su nombre."""
@@ -187,7 +197,7 @@ def cargar_catalogo_causas(ruta_catalogo):
     """Devuelve las categorías del anexo como COD_CAUSA y CAUSA.
 
     Conserva el Excel original y aplica los ajustes documentados.
-    Comprueba la coherencia de los códigos y la unicidad de los nombres.
+    Comprueba la coherencia de códigos y un único nombre por categoría.
     """
 
     # El encabezado está en la fila 9 de Excel; pandas cuenta desde cero.

@@ -1,47 +1,395 @@
-/* Base visual del dashboard de mortalidad de 2019. */
+/* Dashboard de mortalidad: jerarquía visual y navegación por alcance. */
+:root {
+    --fondo: #f3f6fb;
+    --superficie: #ffffff;
+    --navegacion: #142b49;
+    --texto: #14283f;
+    --texto-secundario: #60738a;
+    --borde: #e1e8f1;
+    --azul: #2463bd;
+    --acento: #138f83;
+    --radio: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f1f5f9;
-    color: #0f172a;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+.dashboard {
+    max-width: 1640px;
+    padding: 24px;
+    margin: 0 auto;
 }
 
 .encabezado {
-    background-color: #0f172a;
-    color: #ffffff;
-    padding: 24px;
-    border-radius: 12px;
-    margin-bottom: 24px;
-}
-
-/* Estilo reutilizable para las secciones con visualizaciones. */
-.tarjeta {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 24px;
-}
-
-h1, h2 {
-    margin-top: 0;
-}
-
-/* Panorama general: una columna por defecto. */
-.fila-resumen {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 24px;
+    align-items: center;
+    padding: 22px 26px;
     margin-bottom: 24px;
+    border-radius: var(--radio);
+    background: linear-gradient(110deg, #142b49, #204b76);
+    color: #ffffff;
+    box-shadow: 0 6px 20px #142b4910;
 }
 
-.fila-resumen .tarjeta {
+.encabezado h1 {
+    margin: 4px 0 6px;
+    font-size: clamp(1.5rem, 2.1vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+.ceja,
+.ceja-seccion {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.ceja {
+    color: #b8d6ef;
+}
+
+.subtitulo-dashboard {
+    margin: 0;
+    color: #d2e1ef;
+    font-size: 0.9rem;
+}
+
+.indicadores-nacionales {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 12px;
+}
+
+.indicador-nacional {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 108px;
+    padding: 12px 15px;
+    border: 1px solid #ffffff22;
+    border-radius: 10px;
+    background: #ffffff0a;
+}
+
+.etiqueta-indicador {
+    color: #c3d9eb;
+    font-size: 0.67rem;
+}
+
+.valor-indicador {
+    margin-top: 3px;
+    font-size: 1.45rem;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+}
+
+/* Estas clases se añaden a los contenedores nativos de dcc.Tabs. */
+.dashboard .dashboard-navegacion {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 22px;
+    width: 100%;
+    overflow: visible;
+    align-items: start;
+}
+
+.dashboard .dashboard-menu {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    width: 220px;
+    padding: 12px;
+    gap: 8px;
+    border-radius: var(--radio);
+    background: var(--navegacion);
+}
+
+.dashboard .dashboard-menu .opcion-seccion.tab,
+.dashboard .dashboard-menu .opcion-seccion.tab:last-child {
+    flex: 0 0 auto;
+    padding: 16px 14px;
+    border: 0 !important;
+    border-left: 3px solid transparent !important;
+    border-radius: 8px;
+    background: transparent;
+    color: #c8d9e9;
+    text-align: left;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: background 160ms ease, color 160ms ease;
+}
+
+.dashboard .dashboard-menu .opcion-seccion:hover {
+    background: #ffffff0d;
+    color: #ffffff;
+}
+
+.dashboard .dashboard-menu .opcion-seccion-activa.tab,
+.dashboard .dashboard-menu .opcion-seccion-activa.tab:last-child {
+    border-left-color: #35c1b2 !important;
+    background: #285071;
+    color: #ffffff;
+}
+
+.dashboard .dashboard-menu .opcion-seccion:focus-visible {
+    outline: 2px solid #8de2d8;
+    outline-offset: 2px;
+}
+
+.dashboard .dashboard-contenido {
+    display: block;
     min-width: 0;
+    width: 100%;
+}
+
+.cabecera-seccion {
+    margin: 0 0 18px;
+}
+
+.ceja-seccion {
+    color: var(--acento);
+}
+
+.titulo-seccion {
+    margin: 4px 0 6px;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+.descripcion-seccion {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+.tarjeta {
+    min-width: 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background: var(--superficie);
+    box-shadow: 0 3px 12px #142b4905;
+}
+
+.titulo-tarjeta {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.nota-tarjeta {
+    margin: 0 0 10px;
+    color: var(--texto-secundario);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.panel-consulta {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr);
+    column-gap: 28px;
+    row-gap: 12px;
+    border-top: 3px solid var(--acento);
+}
+
+.control-departamento {
+    min-width: 0;
+}
+
+.control-departamento label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.resumen-seleccion {
+    align-self: center;
+    padding-left: 24px;
+    border-left: 1px solid var(--borde);
+}
+
+.etiqueta-metrica {
+    color: var(--texto-secundario);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.metrica-seleccion {
+    margin: 4px 0 0;
+    color: var(--azul);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.nota-alcance {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 0.75rem;
+}
+
+.rejilla-dos,
+.rejilla-nacional {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.rejilla-dos > .tarjeta,
+.rejilla-nacional > .tarjeta {
     margin-bottom: 0;
 }
 
-/* Comparación mensual y territorial en ventanas amplias. */
-@media (min-width: 1200px) {
-    .fila-resumen {
-        grid-template-columns: 1fr 1fr;
+/* El marco reserva espacio; el Graph interior ocupa el 100 % de esta altura. */
+.grafico {
+    min-width: 0;
+    width: 100%;
+}
+
+.grafico-consulta {
+    height: 420px;
+}
+
+.grafico-mapa {
+    height: 640px;
+}
+
+.grafico-sexo {
+    height: 1050px;
+}
+
+.desplazamiento-tabla {
+    overflow-x: auto;
+}
+
+.grafico-tabla {
+    height: 540px;
+    min-width: 620px;
+}
+
+.grafico-x95 {
+    height: 440px;
+}
+
+.grafico-circular {
+    height: 560px;
+}
+
+.pie-dashboard {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--borde);
+    color: var(--texto-secundario);
+    font-size: 0.72rem;
+}
+
+@media (min-width: 1280px) {
+    .rejilla-dos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .encabezado {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .indicadores-nacionales {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard {
+        padding: 16px;
+    }
+
+    .dashboard .dashboard-navegacion {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .dashboard .dashboard-menu {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        padding: 8px;
+    }
+
+    .dashboard .dashboard-menu .opcion-seccion.tab {
+        padding: 12px 10px;
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        padding: 12px;
+    }
+
+    .encabezado,
+    .tarjeta {
+        padding: 16px;
+    }
+
+    .indicadores-nacionales {
+        gap: 7px;
+    }
+
+    .indicador-nacional {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .etiqueta-indicador {
+        font-size: 0.58rem;
+    }
+
+    .valor-indicador {
+        font-size: 1.15rem;
+    }
+
+    .dashboard .dashboard-menu {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .panel-consulta {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .resumen-seleccion {
+        padding: 12px 0 0;
+        border-left: 0;
+        border-top: 1px solid var(--borde);
+    }
+
+    .titulo-seccion {
+        font-size: 1.3rem;
     }
 }

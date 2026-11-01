@@ -21,6 +21,7 @@ from src.datos import (
     seleccionar_menores_municipios,
 )
 
+
 def guardar_resumen(tabla, nombre, carpeta_salida, total_esperado):
     """Guarda un resumen si sus casos suman el total de referencia.
 
@@ -67,7 +68,7 @@ def preparar_publicacion():
     # Prepara los conteos departamentales para las vistas filtrables.
     tablas_filtro = resumir_para_filtro_departamental(datos, departamental)
 
-    # Reutiliza la selección de X95 y sus subcódigos ya definida en la app.
+    # Aplica el criterio acordado: X95 y todos sus subcódigos.
     catalogo_municipal = cargar_catalogo_municipios(ruta_divipola)
     es_x95 = datos["COD_MUERTE"].str.startswith("X95", na=False)
     datos_x95 = datos[es_x95]
