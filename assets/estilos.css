@@ -1,0 +1,27 @@
+/* Base visual del dashboard de mortalidad de 2019. */
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+.encabezado {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+/* Estilo reutilizable para las secciones con visualizaciones. */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}

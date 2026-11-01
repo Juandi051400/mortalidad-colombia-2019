@@ -1,0 +1,1030 @@
+COD_CAUSA,CASOS,CAUSA
+I21,35323,Infarto Agudo Del Miocardio
+J44,15804,Otras Enfermedades Pulmonares Obstructivas Cronicas
+X95,9273,"Agresion Con Disparo De Otras Armas Fuego, Y Las No Especificadas"
+J18,7437,"Neumonia, Organismo No Especificado"
+C16,5434,Tumor Maligno Del Estomago
+E14,5249,Diabetes Mellitus No Especificada
+C34,4499,Tumor Maligno De Los Bronquios Y Del Pulmon
+I11,3635,Enfermedad Cardiaca Hipertensiva
+C50,3633,Tumor Maligno De La Mama
+C61,3437,Tumor Maligno De La Prostata
+I10,3317,Hipertension Esencial (Primaria)
+C18,3105,Tumor Maligno Del Colon
+I25,3074,Enfermedad Isquemica Cronica Del Corazon
+I61,2856,Hemorragia Intraencefalica
+I69,2696,Secuelas De Enfermedades Cerebrovascular
+I67,2689,Otras Enfermedades Cerebrovasculares
+I63,2680,Infarto Cerebral
+X99,2604,Agresion Con Objeto Cortante
+N39,2594,Otros Trastornos Del Sistema Urinario
+N18,2563,Enfermedad Renal Cronica
+I64,2454,Accidente Vascular Encefalico Agudo No Especificado Como Hemorragico O Isquemico
+E11,2267,Diabetes Mellitus No Insulinodependiente
+I50,2220,Insuficiencia Cardiaca
+I60,2062,Hemorragia Subaracnoidea
+C80,2043,Tumor Maligno De Sitios No Especificados
+K74,2007,Fibrosis Y Cirrosis Del Higado
+C25,1995,Tumor Maligno Del Pancreas
+C22,1955,Tumor Maligno Del Higado Y De Las Vias Biliares Intrahepaticas
+X70,1846,"Lesion Autoinflingida Intencionalmente Por Ahorcamiento, Estrangulamiento O Sofocacion"
+C53,1819,Tumor Maligno Del Cuello Del Utero
+G30,1815,Enfermedad de Alzheimer
+V89,1677,"Accidente De Vehículo De Motor O Sin Motor, Tipo De Vehículo No Especificado"
+J15,1631,"Neumonia Bacteriana, No Clasificada En Otra Parte"
+I71,1558,Aneurisma Y Diseccion Aorticos
+I12,1520,Enfermedad Renal Hipertensiva
+B20,1487,"Enfermedad por virus de la inmunodeficiencia humana [VIH], resultante en enfermedades infecciosas y parasitarias"
+R98,1414,Muerte Sin Asistencia
+C71,1316,Tumor Maligno Del Encefalo
+Y34,1179,Evento No Especificado De Intencion No Determinada
+I48,1170,Fibrilacion Y Aleteo Auricular
+C56,1135,Tumor Maligno Del Ovario
+V29,1099,"Motociclista Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+K56,1095,Ileo Paralitico Y Obstruccion Intestinal Sin Hernia
+E46,1049,Desnutricion Proteicocalorica No Especificada
+I42,1021,Cardiomiopatia
+K92,1005,Otras Enfermedades Del Sistema Digestivo
+A41,979,Otras sepsis
+A16,936,"Tuberculosis Respiratoria, No Confirmada Bacteriologica E Histologicamente"
+C20,931,Tumor Maligno Del Recto
+A09,927,Otras gastroenteritis y colitis de origen infeccioso y no especificado
+K65,923,Peritonitis
+F03,917,Demencia No Especificada
+C92,904,Leucemia Mieloide
+D37,878,Tumor de comportamiento incierto o desconocido de la cavidad bucal y de los órganos digestivos
+I13,867,Enfermedad Cardiorrenal Hipertensiva
+C85,850,Linfoma No Hodgkin De Otro Tipo Y El No Especificado
+J84,849,Otras Enfermedades Pulmonares Intersticiales
+E43,805,Desnutricion Proteicocalorica Severa No Especificada
+C91,803,Leucemia Linfoide
+K55,798,Trastornos Vasculares De Los Intestinos
+C90,777,Mieloma Multiple Y Tumores Malignos De Celulas Plasmaticas
+E78,767,Trastornosdel Metabolismo De Las Lipoproteinas Y Otras Lipidemias
+C15,731,Tumor Maligno Del Esofago
+K70,731,Enfermedad Alcoholica Del Higado
+I26,706,Embolia Pulmonar
+C24,705,Tumor Maligno De Otras Partes Y De Las No Especificadas De Las Vias Biliares
+K80,700,Colelitiasis
+P36,668,Sepsis Bacteriana Del Recien Nacido
+X59,660,Exposicion A Factores No Especificados
+I24,640,Otras Enfermedades Isquemicas Agudas Del Corazon
+D43,632,Tumor de comportamiento incierto o desconocido del encéfalo y del sistema nervioso central
+J98,624,Otros Trastornos Respiratorios
+C67,623,Tumor Maligno De La Vejiga Urinaria
+R99,619,Otras Causas Mal Definidas Y Las No Especificadas De Mortalidad
+J69,607,Neumonitis debida  a solidos y liquidos
+G40,601,Epilepsia
+C64,577,Tumor Maligno Del Rinon Excepto De La Pelvis Renal
+L08,574,Otras Infecciones Locales De La Piel Y Del Tejido Subcutaneo
+W18,568,Otras Caidas En El Mismo Nivel
+I35,559,Trastornos No Reumaticos De La Valvula Aortica
+V24,546,Motociclista Lesionado Por Colision Con Vehiculo De Transporte Pesado O Bus
+D38,538,Tumor De Comportamiento Incierto Del Oido Medio Y De Los Organos Respiratorios E Intratoracicos
+M32,538,Lupus Eritematoso Sistemico
+G93,535,Otros Trastornos Del Encefalo
+V02,534,Peaton Lesionado Por Colision Con Vehiculo De Dos O Tres Ruedas
+K83,528,Otras Enfermedades De Las Vias Biliares
+C83,526,Linfoma no folicular
+P22,505,Dificultad Respiratoria Del Recien Nacido
+G20,483,Enfermedad de Parkinson
+Y09,479,Agresion Por Medios No Especificados
+N40,476,Hiperplasia De La Prostata
+I34,468,Trastornos No Reumaticos De La Valvula Mitral
+Q24,461,Otras Malformaciones Congenitas Del Corazon
+C44,459,Otros Tumores Maligno De La Piel
+V09,453,"Peaton Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+K25,453,Ulcera Gastrica
+N19,449,Insuficiencia Renal No Especificada
+I62,445,Otras Hemorragias Intracraneales No Traumaticas
+I27,443,Otras Enfermedades Cardiopulmonares
+G80,438,Paralisis Cerebral
+K85,436,Pancreatitis Aguda
+C76,435,Tumor Maligno De Otros Sitios Y De Los Sitios Mal Definidos
+E10,430,Diabetes Mellitus Insulinodependiente
+C49,426,Tumor Maligno Otros Tejidos Conjuntivos Y De Tejidos Blandos
+C23,422,Tumor Maligno De La Vesicula Biliar
+C73,421,Tumor Maligno De La Glandula Tiroides
+I49,416,Otras Arritmias Cardiacas
+D48,415,Tumor De Comportamiento Incierto O Desconocido De Otros Sitios Y De Los No Especificados
+C32,399,Tumor Maligno De La Laringe
+B24,388,"Enfermedad Por Virus De La Inmunodeficiencia Humana [ Vih ], Sin Otra Especificacion"
+E66,381,Obesidad
+C43,372,Melanoma Maligno De La Piel
+C54,371,Tumor Maligno Del Cuerpo Del Utero
+I77,368,Otros Trastornos Arteriales O Arteriolares
+W69,366,Ahogamiento Y Sumersion Mientras Se Esta En Aguas Naturales
+V27,357,Motociclista Lesionado Por Colision Con Objeto Fijo O Estacionado
+E87,353,"Otros Trastornos De Los Liquidos, De Los Electrolitos Y Del Equilibrio Acido-Basico"
+Y83,351,"Cirugia Y Otros Procedimientos Quirurgicos, Como La Causa De Reaccion Anormal Del Paciente O De Complicacion Posterior, Sin Mencion De Incidente En El Momento De Efectuar El Procedimiento"
+K57,340,Enfermedad Diverticular Del Intestino
+B22,339,"Enfermedad Por Virus De La Inmunodeficiencia Humana [ Vih ], Resultante En Otras Enfermedades Especificadas"
+K29,336,Gastritis Y Duodenitis
+I80,335,Flebitis Y Tromboflebitis
+L89,324,Ulcera De Decubito Y Por Area De Presion
+N17,324,Insuficiencia Renal Aguda
+D46,317,Sindromes Mielodisplasicos
+C55,314,"Tumor Maligno Del Utero, Parte No Especificada"
+G12,311,Atrofia muscular espinal y síndromes afines
+D47,299,"Otros Tumores De Comportamiento Incierto O Desconocido Del Tejido Linfatico, De Los Organos Hematopoyeticos Y De Tejidos Afines"
+V22,295,Motociclista Lesionado Por Colision Con Vehiculo De Dos O Tres Ruedas
+V23,292,"Motociclista Lesionado Por Colision Con Automovil, Camioneta O Furgoneta"
+C41,288,"Tumor Maligno De Los Huesos Y De Los Cartilagos Articulares, De Otros Sitios Y De Sitios No Especificados"
+I73,285,Otras Enfermedades Vasculares Perifericas
+C95,278,Leucemia De Celulas De Tipo No Especificado
+W17,276,Otras Caidas De Un Nivel A Otro
+V28,272,Motociclista Lesionado Accidente Transporte Sin Colision
+I51,272,Complicaciones Y Descripciones Mal Definidas En Enfermedades Cardiacas
+R54,271,Senilidad
+P21,266,Asfixia Del Nacimiento
+X74,264,"Lesion Autoinflingida Intencionalmente Por Disparo De Otras Armas De Fuego, Y Las No Especificadas"
+V04,264,Peaton Lesionado Por Colision Con Vehiculo De Transporte Pesado O Autobus
+Q25,260,Malformaciones Congenitas De Las Grandes Arterias
+K81,260,Colecistitis
+K63,257,Otras Enfermedades De Los Intestinos
+X91,257,"Agresion Por Ahorcamiento, Estrangulamiento Y Sofocacion"
+W74,253,Ahogamiento Y Sumersion No Especificados
+W84,249,Obstruccion No Especificada De La Respiracion
+P24,248,Sindromes De Aspiracion Neonatal
+I38,247,"Endocarditis, Valvula No Especificada"
+X69,244,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Otros Productos Quimicos Y Sustancias Nocivas Y Los No Especificados"
+P77,237,Enterocolitis Necrotizante Del Feto Y Del Recien Nacido
+J68,234,"Afecciones Respiratorias Debidas A Inhalacion De Gases, Humos, Vapores Y Sustancias Quimicas"
+M06,229,Otras Artritis Reumatoides
+L03,224,Celulitis
+J43,221,Enfisema
+V03,220,Peaton Lesionado Por Colision Con Automovil Camioneta Furgoneta
+K27,216,"Ulcera Peptica, Sitio No Especificado"
+K35,216,Apendicitis Aguda
+J96,213,Insuficiencia Respiratoria No Clasificadas En Otra Parte
+C02,213,Tumor Maligno De Otras Partes Y De Las No Especificadas De La Lengua
+C26,210,Tumor Maligno De Otros Sitios Y De Los Mal Definidos De Los Organos Digestivos
+Y30,207,"Caida, Salto O Empujon Desde Lugar Elevado, De Intencion No Determinada"
+B57,206,Enfermedad De Chagas
+K40,203,Hernia Inguinal
+R57,198,"Choque, No Clasificado En Otra Parte"
+F01,195,Demencia Vascular
+Y21,195,Ahogamiento Y Sumersion De Intencion No Determinada
+C48,195,Tumor Maligno Del Peritoneo Y Retroperitoneo
+O96,193,Muerte Materna Debida A Cualquier Causa Obstetrica Que Ocurre Despues De 42 Dias Pero Antes De Un Año Del Parto
+P07,192,"Trastornos Relacionados Con La Duracion Corta De La Gestacion Y Con Bajo Peso Al Nacer, No Clasificados En Otra Parte"
+Q21,191,Malformaciones Congenitas De Los Tabiques Cardiacos
+J42,191,Bronquitis Cronica No Especificada
+G41,190,Estado de mal epiléptico
+X68,188,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Plaguicidas"
+P26,187,Hemorragia Pulmonar Originada En El Periodo Perinatal
+K75,186,Otras Enfermedades Inflamatorias Del Higado
+C81,184,Linforma De Hodgkin
+J67,182,Neumonitis Debida A Hipersensibilidad Al Polvo Organico
+D69,179,Purpura Y Otras Afecciones Hemorragicas
+W10,175,Caida En O Desde Escalera Y Escalones
+K72,174,"Insuficiencia Hepatica, No Clasificadas En Otra Parte"
+A49,174,Infeccion Bacteriana De Sitio No Especificado
+P29,173,Trastornos Cardiovasculares Originados En El Periodo Perinatal
+I33,173,Endocarditis Aguda Y Subaguda
+B23,170,"Enfermedad Por Virus De La Inmunodeficiencia Humana [ Vih ], Resultante En Otras Afecciones"
+D61,169,Otras Anemias Aplasticas
+Q79,165,"Malformaciones Congenitas Del Sistema Osteomuscular, No Clasificadas En Otra Parte"
+K76,165,Otras Enfermedades Del Higado
+W13,164,"Caida Desde, Fuera O A Traves De Un Edificio U Otra Construccion"
+A97,163,Dengue
+W87,162,Exposicion A Corriente Electrica No Especificada
+G04,161,"Encefalitis, mielitis y encefalomielitis"
+P23,160,Neumonia Congenita
+P02,160,"Feto Y Recien Nacido Afectado Por Complicaciones De La Placenta, Del Cordon Umbilical Y De Las Membranas"
+G91,158,Hidrocefalo
+C19,158,Tumor Maligno De La Union Rectosigmoidea
+Q90,158,Sindrome De Down
+K26,156,Ulcera Duodenal
+C38,156,"Tumor Maligno Del Corazon, Del Mediastino Y De La Pleura"
+D64,152,Otras Anemias
+X80,149,Lesion Autoinflingida Intencionalmente Al Saltar Desde Un Lugar Elevado
+W20,148,"Golpe Por Objeto Arrojado, Proyectado O Que Cae"
+D68,147,Otros Defectos De La Coagulacion
+G00,146,"Meningitis bacteriana, no clasificada en otra parte"
+I72,145,Otros Aneurismas Y Aneurismas Disecantes
+I44,143,Bloqueo Auriculoventricular Y De Rama Izquierda Del Haz
+I87,143,Otros Trastornos De Las Venas
+P52,143,Hemorragia Intracraneal No Traumatica Del Feto Y Del Recien Nacido
+P96,142,Otras Afecciones Originadas En El Periodo Perinatal
+I20,142,Angina De Pecho
+Y00,141,Agresion Con Objeto Romo O Sin Filo
+C62,136,Tumor Maligno Del Testiculo
+J22,136,Infeccion Aguda No Especificada De Las Vias Respiratorias Inferiores
+C17,136,Tumor Maligno Del Intestino Delgado
+C60,130,Tumor Maligno Del Pene
+P00,127,Feto Y Recien Nacido Afectados Por Condiciones De La Madre No Necesariamente Relacionadas Con El Embarazo Presente
+M34,127,Esclerosis Sistemica
+D39,125,Tumor de comportamiento incierto o desconocido de los órganos genitales femeninos
+Y20,124,"Ahorcamiento, Estrangulamiento Y Sofocacion, De Intencion No Determinada"
+J90,124,Derrame Pleural No Clasificado En Otra Parte
+J64,124,"Neumoconiosis, No Especificada"
+M62,121,Otros Trastornos De Los Musculos
+A04,119,Otras Infecciones Intestinales Bacterianas
+V14,118,Ciclista Lesionado Por Colision Con Vehiculo De Transporte Pesado O Bus
+X36,115,"Victima De Avalancha, Derrumbe Y Otros Movimientos De Tierra"
+E03,115,Otros Hipotiroidismos
+M86,114,Osteomielitis
+K31,113,Otras Enfermedades Del Estomago Y Del Duodeno
+Y87,112,"Secuelas De Lesiones Autoinfligidas Intencionalmente, Agresiones Y Eventos De Intencion No Determinada"
+C14,112,"Tumor Maligno De Otros Sitios Y De Los Mal Definidos Del Labio, De La Cavidad Bucal Y De La Faringe"
+J46,111,Estado Asmatico
+Y24,110,"Disparo De Otras Armas De Fuego Y Las No Especificadas, De Intencion No Determinada"
+D53,110,Otras Anemias Nutricionales
+J45,109,Asma
+X96,107,Agresion Con Material Explosivo
+G71,104,Trastornos Musculares Primarios
+I74,103,Embolia Y Trombosis Arteriales
+Q23,101,Malformaciones Congenitas De Las Valvulas Aortica Y Mitral
+C45,100,Mesotelioma
+Y19,100,"Envenenamiento Por, Y Exposicion A Otros Productos Quimicos Y Sustancias Nocivas, Y Los No Especificados, De Intencion No Determinada"
+C84,98,Linfoma de células T/NK maduras 
+V19,98,"Ciclista Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+I85,98,Varices Esofagicas
+J85,97,Absceso Del Pulmon Y Del Mediastino
+J80,97,Sindrome De Dificultad Respiratoria Del Adulto
+B21,97,"Enfermedad Por Virus De La Inmunodeficiencia Humana [ Vih ], Resultante En Tumores Malignos"
+N13,96,Uropatia Obstructiva Y Por Reflujo
+Q20,95,Malformaciones Congenitas De Las Camaras Cardiacas Y Sus Conexiones
+Q89,94,"Otras Malformaciones Congenitas, No Clasificadas En Otra Parte"
+D32,94,Tumor Benigno De Las Meninges
+G31,94,"Otras enfermedades degenerativas del sistema nervioso, no clasificadas en otra parte"
+C07,94,Tumor Maligno De La Glandula Parotida
+P01,93,Feto Y Recien Nacido Afectados Por Complicaciones Maternas Del Embarazo
+G03,93,Meningitis debida a otras causas y a las no especificadas
+Q04,93,Otras Malformaciones Congenitas Del Encefalo
+C68,90,Tumor Maligno Otros Organos Urinarios Y De Los No Especificados
+J21,90,Bronquiolitis Aguda
+M00,90,Artritis Piogena
+C21,89,Tumor Maligno Del Ano Y Del Conducto Anal
+K43,87,Hernia Ventral
+P27,87,Enfermedad Respiratoria Cronica Originadas En El Periodo Perinatal
+M72,87,Trastornos Fibroblasticos
+B18,87,Hepatitis Viral Cronica
+Q03,87,Hidrocefalo Congenito
+V68,85,Ocupante De Vehiculo De Transporte Pesado Lesionado Accidente Transporte Sin Colision
+D41,83,Tumor de comportamiento incierto o desconocido de los órganos urinarios
+N00,81,Sindrome Nefritico Agudo
+D84,80,Otras Inmunodeficiencias
+J11,80,Influenza Debida A Virus No Identificado
+W73,80,Otros Ahogamientos Y Sumersiones Especificados
+X09,80,Exposicion A Humos Fuegos Llamas No Especificados
+X41,80,"Envenenamiento Accidental Por, Y Exposicion A Drogas Antiepilepticas, Sedantes, Hipnoticas, Antiparinsonianas Y Psicotropicas, No Clasificadas En Otra Parte"
+O99,78,"Otras Enfermedades Maternas Clasificables En Otra Parte, Pero Que Complican El Embarazo, El Parto Y El Puerperio"
+M80,77,Osteoporosis Con Fractura Patologica
+Q22,77,Malformaciones Congenitas De Las Valvulas Pulmonar Y Tricuspide
+J12,77,"Neumonia Viral, No Clasificada En Otra Parte"
+G35,77,Esclerosis múltiple
+V87,76,"Accidente De Transito De Tipo Especificado, Pero Donde Se Desconoce El Modo De Transporte De La Victima"
+D44,76,Tumor de comportamiento incierto o desconocido de las glándulas endocrinas
+I47,76,Taquicardia Paroxistica
+N12,76,Nefritis Tubulointersticial No Especificada Como Aguda O Cronica
+J81,76,Edema Pulmonar
+I70,76,Aterosclerosis
+K22,75,Otras Enfermedades Del Esofago
+J86,75,Piotorax
+C11,74,Tumor Maligno De La Nasofaringe
+I83,74,Venas Varicosas De Los Miembros Inferiores
+C51,74,Tumor Maligno De La Vulva
+K46,74,Hernia No Especificada De La Cavidad Abdominal
+E88,73,Otros Trastornos Metabolicos
+W79,72,Inhalacion E Ingestion De Alimento Que Causa Obstruccion De Las Vias Respiratorias
+A17,71,Tuberculosis Del Sistema Nervioso
+M84,71,Trastornos De La Continuidad Del Hueso
+E86,70,Deplecion Del Volumen
+V12,69,Ciclista Lesionado Por Colision Con Vehiculo De Dos O Tres Ruedas
+G82,69,Paraplejia Y Cuadriplejia
+D57,68,Trastornos Falciformes
+C72,67,"Tumor Maligno De La Medula Espinal, De Los Nervios Craneales Y De Otras Partes Del Sistema Nervioso Central"
+P28,67,Otros Problemas Respiratorios Del Recien Nacido Originados En El Periodo Perinatal
+V80,67,"Jinete U Ocupante De Vehiculo De Traccion Animal, Lesionado En Accidente De Transporte"
+X93,67,Agresion Con Disparo De Arma Corta
+G61,66,Polineuropatia Inflamatoria
+I31,66,Otras Enfermedades Del Pericardio
+Y33,65,Otros Eventos Especificados De Intencion No Determinada
+N20,64,Calculo Del Rinon Y Del Ureter
+M31,64,Otras Vasculopatias Necrotizantes
+L98,63,Otros Trastornos De La Piel Y Del Tejido Subcutaneo No Clasificados En Otra Parte
+C06,63,Tumor Maligno De Otras Partes Y De Las No Especificadas De La Boca
+L02,62,"Absceso Cutaneo, Furunculo Y Antrax"
+K51,62,Colitis Ulcerativa
+G62,61,Otras Polineuropatias
+E16,60,Otros Trastornos De La Secrecion Interna Del Pancreas
+L97,60,"Ulcera Del Miembro Inferior, No Clasificada En Otra Parte"
+K66,59,Otros Trastornos Del Peritoneo
+E05,59,Tirotoxicosis [ Hipertiroidismo ]
+C74,59,Tumor Maligno De La Glandula Suprarrenal
+C09,59,Tumor Maligno De La Amigdala
+X42,58,"Envenenamiento Accidental Por, Y Exposicion A Narcoticos Y Psicodislepticos [Alucinogenos], No Clasificados En Otra Parte"
+R96,57,Otras Muertes Subitas De Causa Desconocida
+Y86,57,Secuelas De Otros Accidentes
+K44,57,Hernia Diafragmatica
+Y84,56,"Otros Procedimientos Medicos Como La Causa De Reaccion Anormal Del Paciente O De Complicacion Posterior, Sin Mencion De Incidente En El Momento De Efectuar El Procedimiento"
+B90,56,Secuelas De Tuberculosis
+A86,55,"Encefalitis Viral, No Especificada"
+P03,55,Feto Y Recien Nacido Afectados Por Otras Complicaciones Del Trabajo De Parto Y Del Parto
+K59,55,Otros Trastornos Funcionales Del Intestino
+N28,55,"Otros Trastornos Del Riñon Y Del Ureter, No Clasificadas En Otra Parte"
+V58,54,Ocupante De Camioneta O Furgoneta Lesionado En Accidente Transporte Sin Colision
+C31,54,Tumor Maligno De Los Senos Paranasales
+W19,53,Caida No Especificada
+C52,53,Tumor Maligno De La Vagina
+G09,52,Secuelas de enfermedades inflamatorias del sistema nervioso central
+M19,51,Otras Artrosis
+X45,51,"Envenenamiento Accidental Por, Y Exposicion A Alcohol"
+V49,51,"Ocupante De Automovil Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+Q43,51,Otras Malformaciones Congenitas Del Intestino
+Y63,50,Falla En Dosificacion Durante La Atencion Medica Y Quirurgica
+G06,50,Absceso y granuloma intracraneal e intrarraquídeo
+B94,50,Secuelas De Otras Enfermedades Infecciosas Y Parasitarias Y De Las No Especificadas
+X78,50,Lesion Autoinflingida Intencionalmente Por Objeto Cortante
+Q91,50,Sindrome De Edwards Y Sindrome De Patau
+Q33,49,Malformaciones Congenitas Del Pulmon
+A27,49,Leptospirosis
+C96,49,"Otros Tumores Malignos Y Los No Especificados Del Tejido Linfatico, De Los Organos Hematopoyeticos Y De Tejidos Afines"
+M35,48,Otro Compromiso Sistemico Del Tejido Conjuntivo
+D35,48,Tumor Benigno De Otras Glandulas Endocrinas Y De Las No Especificadas
+X49,48,"Envenenamiento Accidental Por, Y Exposicion A Otros Productos Quimicos Y Sustancias Nocivas Y Los No Especificados"
+C05,47,Tumor Maligno Del Paladar
+C69,46,Tumor Maligno Del Ojo Y Sus Anexos
+A19,45,Tuberculosis Miliar
+W40,45,Explosion De Otros Materiales
+G95,44,Otras Enfermedades De La Medula Espinal
+F19,44,Trastornos Mentales Y Del Comportamiento Debidos Al Uso De Multiples Drogas Y Al Uso De Otras Sustancias Psicoactivas
+G37,44,Otras enfermedades desmielinizantes del sistema nervioso central
+V20,44,Motociclista Lesionado Por Colision Con Peaton O Animal
+C10,44,Tumor Maligno De La Orofaringe
+O14,43,Preeclampsia
+E84,43,Fibrosis Quistica
+Q02,43,Microcefalia
+G10,43,Enfermedad de Huntington
+N04,42,Sindrome Nefrotico
+R95,42,Sindrome De La Muerte Subita Infantil
+C40,42,Tumor Maligno De Los Huesos Y De Los Cartilagos Articulares De Los Miembros
+J04,42,Laringitis Y Traqueitis Agudas
+V13,41,"Ciclista Lesionado Por Colision Con Automovil, Camioneta O Furgoneta"
+W85,41,Exposicion A Lineas De Transmision Electrica
+F10,41,Trastornos Mentales Y Del Comportamiento Debidos Al Uso De Alcohol
+X84,41,Lesion Autoinflingida Intencionalmente Por Medios No Especificados
+K82,41,Otras Enfermedades De La Vesicula Biliar
+C75,41,Tumor Maligno De Otras Glandulas Endocrinas Y De Estructuras Afines
+Y26,41,"Exposicion Al Humo, Fuego Y Llamas, De Intencion No Determinada"
+D40,40,Tumor de comportamiento incierto o desconocido de los órganos genitales masculinos
+X20,40,Contacto Traumatico Con Serpientes Y Lagartos Venenosos
+F05,39,"Delirio, No Inducido Por Alcohol O Por Otras Sustancias Psicoactivas"
+V44,39,Ocupante De Automovil Lesionado Por Colision Con Vehiculo De Transporte Pesado O Autobus
+E83,39,Trastornos Del Metabolismo De Los Minerales
+W55,39,Mordedura O Ataque De Otros Mamiferos
+Q39,38,Malformaciones Congenitas Del Esofago
+D70,38,Agranulocitosis
+K42,37,Hernia Umbilical
+Y28,37,"Contacto Traumatico Con Objeto Cortante, De Intencion No Determinada"
+Q87,37,Otros Sindromes De Malformaciones Congenitas Especificados Que Afectan Multiples Sistemas
+P83,37,Otras Afecciones De La Piel Especificas Del Feto Y Del Recien Nacido
+V69,37,"Ocupante De Vehiculo De Transporte Pesado Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+I36,36,Trastornos No Reumaticos De La Valvula Tricuspide
+X33,36,Victima De Rayo
+N49,36,"Trastornos Inflamatorios De Los Organos Genitales Masculinos, No Clasificados En Otra Parte"
+W34,35,"Disparo Con Otras Armas Fuego, Y Las No Especificadas"
+W70,35,Ahogamiento Y Sumersion Posterior A Caida En Aguas Naturales
+K86,35,Otras Enfermedades Del Pancreas
+P91,35,Otras Alteraciones Cerebrales Del Recien Nacido
+J20,35,Bronquitis Aguda
+F20,35,Esquizofrenia
+A15,34,"Tuberculosis Respiratoria, Confirmada Bacteriologica E Histologicamente"
+I05,34,Enfermedades Reumaticas De La Valvula Mitral
+J62,33,Neumoconiosis Debidas A Polvo De Silice
+E85,33,Amiloidosis
+G70,33,Miastenia Gravis Y Otros Trastornos Neuromusculares
+V47,33,Ocupante De Automovil Lesionado Por Colision Con Objeto Fijo O Estacionado
+J93,33,Neumotorax
+F79,33,"Retraso mental, no especificado"
+M60,32,Miositis
+P54,32,Otras Hemorragias Neonatales
+Y11,31,"Envenenamiento Por, Y Exposicion A Drogas Antiepilepticas, Sedantes, Hipnoticas, Antiparkinsonianas Y Psicotrópicas, No Clasificadas En Otra Parte, De Intencion No Determinada"
+J94,31,Otras Afecciones De La Pleura
+I08,31,Enfermedades Valvulares Multiples
+A50,31,Sifilis Congenita
+V48,31,Ocupante De Automovil Lesionado En Accidente De Transporte Sin Colision
+D59,31,Anemia Hemolitica Adquirida
+C82,31,Linfoma Folicular
+M46,31,Otras Espondilopatias Inflamatorias
+Q00,31,Anencefalia Y Malformaciones Congenitas Similares
+O15,31,Eclampsia
+X61,31,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Drogas Antiepilepticas, Sedantes, Hipnoticas, Antiparkinsonianas Y Psicotropicas, No Clasificadas En Otra Parte"
+V95,31,"Accidente De Aeronave De Motor, Con Ocupante Lesionado"
+P78,31,Otros Trastornos Perinatales Del Sistema Digestivo
+R09,30,Otros Sintomas Y Signos Que Involucran Los Sistemas Circulatorio Y Respiratorio
+X64,30,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Otras Drogas, Medicamentos Y Sustancias Biologicas Y Los No Especificados"
+N15,30,Otras Enfermedades Renales Tubulointersticiales
+O98,30,"Enfermedades Maternas Infecciosas Y Parasitarias Clasificables En Otra Parte, Pero Que Complican El Embarazo, El Parto Y El Puerperio"
+W14,30,Caida Desde Un Arbol
+I82,29,Otras Embolias Y Trombosis Venosas
+C93,29,Leucemia Monocitica
+O72,29,Hemorragia Postparto
+Q41,29,"Ausencia, Atresia Y Estenosis Congenita Del Intestino Delgado"
+V90,29,Accidente De Embarcacion Que Causa Ahogamiento Y Sumersion
+C01,28,Tumor Maligno De La Base De La Lengua
+G23,28,Otras enfermedades degenerativas de los núcleos de la base
+V59,28,"Ocupante De Camioneta O Furgoneta Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+C70,28,Tumor Maligno De Las Meninges
+J40,28,Bronquitis No Especificada Como Aguda O Cronica
+P39,28,Otras Infecciones Especificadas Del Periodo Perinatal
+V99,28,Accidente De Transporte No Especificado
+V18,27,Ciclista Lesionado En Accidente De Transporte Sin Colision
+B49,27,"Micosis, No Especificada"
+Y85,27,Secuelas De Accidente De Transporte
+Q07,27,Otras Malformaciones Congenitas Del Sistema Nervioso
+D58,26,Otras Anemias Hemoliticas Hereditarias
+C33,26,Tumor Maligno De La Traquea
+P37,26,Otras Enfermedades Infecciosas Y Parasitarias Congenitas
+A39,26,Enfermedad Meningococica
+W86,26,Exposicion A Otras Corrientes Electricas Especificadas
+X23,26,"Contacto Traumatico Con Avispones, Avispas Y Abejas"
+E40,26,Kwashiorkor
+L10,25,Penfigo
+Q99,25,"Otras Anomalias Cromosomicas, No Clasificadas En Otra Parte"
+K50,25,Enfermedades De Crohn [Enteritis Regional]
+X71,25,Lesion Autoinflingida Intencionalmente Por Ahogamiento Y Sumersion
+M05,25,Artritis Reumatoide Seropositiva
+B45,25,Criptococosis
+E27,25,Otros Trastornos De La Glandula Suprarrenal
+V64,25,Ocupante De Vehiculo De Transporte Pesa Lesionado Por Colision Con Vehiculo De Transporte Pesado O Autobus
+K41,25,Hernia Femoral
+Q26,24,Malformaciones Congenitas De Las Grandes Venas
+P61,24,Otros Trastornos Hematologicos Perinatales
+Q60,24,Agenesia Renal Y Otras Malformaciones Hipoplasicas Del Rinon
+Q05,24,Espina Bifida
+R56,24,"Convulsiones, No Clasificadas En Otra Parte"
+N10,24,Nefritis Tubulointersticial Aguda
+G96,24,Otros Trastornos Del Sistema Nervioso Central
+Q44,23,"Malformaciones Congenitas De La Vesicula Biliar, De Los Conductos Biliares Y Del Higado"
+X44,23,"Envenenamiento Accidental Por, Y Exposicion A Otras Drogas, Medicamentos Y Sustancias Biologicas Y Los No Especificados"
+I40,23,Miocarditis Aguda
+W15,23,Caida Desde Peñasco
+E44,23,Desnutricion Proteicocalorica De Grado Moderado Y Leve
+N32,22,Otros Trastornos De La Vejiga
+B01,22,Varicela
+J47,22,Bronquiectasia
+W67,22,Ahogamiento Y Sumersion Mientras Se Esta En Una Piscina
+C57,22,Tumor Maligno De Otros Organos Genitales Femeninos Y Los No Especificados
+A18,22,Tuberculosis De Otros Organos
+X47,22,"Envenenamiento Accidental Por, Y Exposicion A Otros Gases Y Vapores"
+D42,21,Tumor de comportamiento incierto o desconocido de las meninges
+P25,21,"Enfisema Intersticial Y Afecciones Relacionadas, Originadas En El Periodo Perinatal"
+J38,21,"Enfermedades De Las Cuerdas Vocales Y De La Laringe, No Clasificadas En Otra Parte"
+K62,21,Otras Enfermedades Del Ano Y Del Recto
+Q92,21,"Otras Trisomias Y Trisomias Parciales De Los Autosomas, No Clasificadas En Otra Parte"
+D76,21,Otras enfermedades especificadas con participación del tejido linforreticular y del tejido reticulohistiocítico
+A46,21,Erisipela
+C37,21,Tumor Maligno Del Timo
+E12,21,Diabetes Mellitus Asociada Con Desnutricion
+B37,20,Candidiasis
+W76,20,Otros Estrangulamientos Y Ahorcamientos Accidentales
+P60,20,Coagulacion Intravascular Diseminada En El Feto Y El Recien Nacido
+Q61,20,Enfermedad Quistica Del Rinon
+W80,20,Inhalacion E Ingestion De Otros Objetos Que Causan Obstruccion De Las Vias Respiratorias
+Y57,20,"Efectos Adversos De Otras Drogas Y Medicamentos, Y Los No Especificados"
+Y04,19,Agresion Con Fuerza Corporal
+V54,19,Ocupante De Camioneta O Furgoneta Lesionado Por Colision Con Vehiculo De Transporte Pesado O Autobus
+V57,19,Ocupante De Camioneta O Furgoneta Lesionado Por Colision Con Objeto Estacionado Fijo
+M83,19,Osteomalacia Del Adulto
+J32,19,Sinusitis Cronica
+G92,19,Encefalopatia Toxica
+Y18,19,"Envenenamiento Por, Y Exposicion A Plaguicidas De Intencion No Determinada"
+C08,19,Tumor Maligno De Otras Glandulas Salivales Mayores Y De Las No Especificadas
+N05,19,Sindrome Nefritico No Especificado
+J09,19,Influenza debida a ciertos virus de la influenza identificados
+B91,19,Secuelas De Poliomielitis
+R91,18,Hallazgos Anormales En Diagnostico Por Imagen Del Pulmon
+M33,18,Dermatopolimiositis
+A02,18,Otras Infecciones Debidas Salmonella
+W31,18,"Contacto Traumatico Con Otras Maquinarias, Y Las No Especificadas"
+J10,18,Influenza Debida A Otro Virus De La Influenza Identificado
+V17,18,Ciclista Lesionado Por Colision Con Objeto Estacionado O Fijo
+Y25,18,"Contacto Traumatico Con Material Explosivo, De Intencion No Determinada"
+W06,18,Caida Que Implica Cama
+C94,18,Otras Leucemias De Tipo Celular Especificado
+G11,17,Ataxia hereditaria
+W11,17,Caida En O Desde Escaleras Manuales
+V78,17,Ocupante De Autobus Lesionado Accidente De Transporte Sin Colision
+G47,17,Trastornos del sueño
+K71,17,Enfermedad Toxica Del Higado
+C00,17,Tumor Maligno Del Labio
+X94,17,"Agresion Con Disparo De Rifle, Escopeta Y Arma Larga"
+B34,17,Infeccion Viral De Sitio No Especificado
+J39,17,Otras Enfermedades De Las Vias Respiratorias Superiores
+A52,17,Sifilis Tardia
+H70,17,Mastoiditis Y Afecciones Relacionadas
+E72,16,Otros Trastornos Del Metabolismo De Los Aminoacidos
+J60,16,Neumoconiosis De Los Mineros De Del Carbon
+I95,16,Hipotension
+D50,16,Anemias Por Deficiencia De Hierro
+X48,16,"Envenenamiento Accidental Por, Y Exposicion A Plaguicidas"
+X92,16,Agresion Por Ahogamiento Y Sumersion
+N81,16,Prolapso Genital Femenino
+N76,16,Otras Afecciones Inflamatorias De La Vagina Y De La Vulva
+K61,16,Absceso De Las Regiones Anal Y Rectal
+M16,16,Coxartrosis [Artrosis De La Cadera]
+A87,16,Meningitis Viral
+M81,16,Osteoporosis Sin Fractura Patologica
+C46,15,Sarcoma De Kaposi
+D18,15,Hemangioma Y Linfangioma De Cualquier Sitio
+K20,15,Esofagitis
+X12,15,Contacto Con Otros Liquidos Calientes
+C30,15,Tumor Maligno De Las Fosas Nasales Y Del Oido Medio
+W12,15,Caida En O Desde Andamio
+Q28,15,Otras Malformaciones Congenitas Del Sistema Circulatorio
+F17,15,Trastornos Mentales Y Del Comportamiento Debidos Al Uso De Tabaco
+Q85,15,"Facomatosis, No Clasificadas En Otra Parte"
+N42,15,Otros Trastornos De La Prostata
+V01,14,Peaton Lesionado Por Colision Con Vehiculo De Pedal
+V43,14,Ocupante De Automovil Lesionado Por Colision Con Auto Camioneta O Furgoneta
+C47,14,Tumor Maligno De Los Nervios Perifericos Y Del Sistema Nervioso Autonomo
+P57,14,Kernicterus
+B58,14,Toxoplasmosis
+R04,14,Hemorragias De Las Vias Respiratorias
+B82,14,"Parasitosis Intestinal, Sin Otra Especificacion"
+C04,14,Tumor Maligno Del Piso De La Boca
+C13,14,Tumor Maligno De La Hipofaringe
+M13,14,Otras Artritis
+W78,14,Inhalacion De Contenidos Gastricos
+P35,13,Enfermedades Virales Congenitas
+V67,13,Ocupante De Vehiculo De Transporte Pesado Lesionado Por Colision Con Objeto Estacionado O Fijo
+K90,13,Malabsorcion Intestinal
+F32,13,Episodio Depresivo
+Y29,13,"Contacto Traumatico Con Objeto Romo O Sin Filo, De Intencion No Determinada"
+O95,13,Muerte Obstetrica De Causa No Especificada
+W01,13,"Caida En El Mismo Nivel Por Deslizamiento, Tropezon O Traspie"
+F06,13,"Otros Trastornos Mentales Debidos A Lesion Y Disfuncion Cerebral, Y A Enfermedad Fisica"
+Y15,13,"Envenenamiento Por, Y Exposicion Al Alcohol, De  Intencion No Determinada"
+L51,13,Eritema Multiforme
+A81,13,Infecciones Del Sistema Nervioso Central Por Virus Atipico
+Y12,13,"Envenenamiento Por, Y Exposicion A Narcoticos Y Psicodislepticos [Alucinogenos], No Clasificados En Otra Parte, De Intencion No Determinada"
+A06,13,Amebiasis
+M10,13,Gota
+G08,13,Flebitis y tromboflebitis intracraneal e intrarraquídea
+Y60,13,"Corte, Puncion, Perforacion O Hemorragia No Intencional Durante La Atencion Medica Y Quirurgica"
+E76,13,Trastornos Del Metabolismo De Los Glucosaminoglicanos
+O00,13,Embarazo Ectopico
+B99,13,Otras Enfermedades Infecciosas Y Las No Especificadas
+N93,13,Otras Hemorragias Uterinas O Vaginales Anormales
+W26,12,"Contacto Traumatico Con Cuchillo, Espada, Daga O Puñal"
+K52,12,Otras Colitis Y Gastroenteritis No Infecciosas
+H66,12,Otitis Media Supurativa Y La No Especificada
+B44,12,Aspergilosis
+Y08,12,Agresion Por Otros Medios Especificados
+B00,12,Infecciones Herpeticas [ Herpes Simple ]
+A35,12,Otros Tetanos
+Y44,12,Efectos Adversos De Agentes Que Afectan Primariamente Los Constituyentes De La Sangre
+K38,12,Otras Enfermedades Del Apendice
+Y14,12,"Envenenamiento Por, Y Exposicion A Otras Drogas, Medicamentos Y Sustancias Biologicas, Y Las No Especificadas, De Intencion No Determinada"
+D81,12,Inmunodeficiencias Combinadas
+I30,12,Pericarditis Aguda
+Y07,12,Otros Maltratos
+B33,12,"Otras Enfermedades Virales, No Clasificadas En Otra Parte"
+O85,12,Sepsis Puerperal
+W77,12,"Obstruccion De La Respiracion Debida A Hundimiento, Caida De Tierra U Otras Sustancias"
+X08,11,"Exposicion A Otros Humos, Fuegos O Llamas Especificados"
+O06,11,Aborto No Especificado
+D75,11,Otras Enfermedades De La Sangre Y De Los Organos Hematopoyeticos
+X73,11,"Lesion Autoinflingida Intencionalmente Por Disparo De Rifle, Escopeta Y Arma Larga"
+W36,11,Explosion Y Rotura De Cilindro Con Gas
+E75,11,Trastornos Del Metabolismo De Los Esfingolipidos Y Otros Trastornos Por Almacenamiento De Lipidos
+O88,11,Embolia Obstetrica
+K64,11,Hemorroides y trombosis venosa perianal
+P38,11,Onfalitis Del Recien Nacido Con O Sin Hemorragia Leve
+B19,11,Hepatitis Viral Sin Otra Especificacion
+X58,11,Exposicion A Otros Factores Especificados
+Y06,11,Negligencia Y Abandono
+B69,11,Cisticercosis
+D82,10,Inmunodeficiencias Asociadas Con Otros Defectos Mayores
+B87,10,Miasis
+B02,10,Herpes Zoster
+Y71,10,"Dispositivos Cardiovasculares, Asociados Con Incidentes Adversos"
+J16,10,"Neumonia Debida A Otros Microorganismos Infecciosos, No Clasificados En Otra Parte"
+Q31,10,Malformaciones Congenitas De La Laringe
+N03,10,Sindrome Nefritico Cronico
+G21,10,Parkinsonismo secundario
+D15,10,Tumor Benigno De Otros Organos Intratoracicos Y De Los No Especificados
+X53,10,Privacion De Alimentos
+E04,10,Otros Bocios No Toxicos
+D13,10,Tumor Benigno De Otras Partes Y De Las Mal Definidas Del Sistema Digestivo
+D33,10,Tumor Benigno Del Encefalo Y De Otras Partes Del Sistema Nervioso Central
+N41,10,Enfermedades Inflamatorias De La Prostata
+D66,10,Deficiencia Hereditaria Del Factor VIII
+B17,10,Otras Hepatitis Virales Agudas
+W07,10,Caida Que Implica Silla
+Y35,10,Intervencion Legal
+P55,10,Enfermedad Hemolitica Del Feto Y Del Recien Nacido
+Y01,9,Agresion Por Empujon Desde Un Lugar Elevado
+W68,9,Ahogamiento Y Sumersion Consecutivos A Caida En Una Piscina
+I89,9,Otros Trastornos No Infecciosos De Los Vasos Y Ganglios Linfaticos
+V21,9,Motociclista Lesionado Por Colision Con Vehiculo De Pedal
+I81,9,Trombosis De La Vena Porta
+W44,9,Cuerpo Extraño Que Penetra Por El Ojo U Orificio Natural
+K73,9,"Hepatitis Cronica, No Clasificada En Otra Parte"
+D71,9,Trastornos funcionales de los polimorfonucleares neutrófilos
+V84,9,Ocupante De Vehículo Especial (De Motor) Para Uso Principalmente En Agricultura Lesionado En Accidente De Transporte
+Q42,9,"Ausencia, Atresia Y Estenosis Congenita Del Intestino Grueso"
+L90,9,Trastornos Atroficos De La Piel
+W24,9,"Contacto Traumatico Con Dispositivos De Elevacion Y Transmision, No Clasificadas En Otra Parte"
+W33,9,"Disparo De Rifle, Escopeta Y Arma Larga"
+A30,9,Lepra [ Enfermedad De Hansen ]
+A37,9,Tos Ferina [ Tos Convulsiva ]
+X62,9,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Narcoticos Y Psicodislepticos [Alucinogenos] No Clasificados En Otra Parte"
+G36,9,Otras desmielinizaciones diseminadas agudas
+D89,9,Otros Trastornos Que Afectan El Mecanismo De La Inmunidad No Clasificados En Otra Parte
+N31,9,"Disfuncion Neuromuscular De Vejiga, No Clasificada En Otra Parte"
+K04,9,Enfermedades De La Pulpa Y De Los Tejidos Periapicales
+M25,9,"Otros Trastornos Articulares, No Clasificadas En Otra Parte"
+L40,9,Psoriasis
+G90,9,Trastornos Del Sistema Nervioso Autonomo
+N45,8,Orquitis Y Epididimitis
+X00,8,Exposicion A Fuego No Controlado En Edificio U Otra Construccion
+X01,8,Exposicion A Fuego No Controlado En Lugar Que No Es Edificio U Otra Construccion
+D25,8,Leiomioma Del Utero
+A08,8,Infecciones Intestinales Debidas A Virus Y Otros Organismos Especificados
+N35,8,Estrechez Uretral
+D45,8,Policitemia Vera
+X67,8,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Otros Gases Y Vapores"
+K21,8,Enfermedad Del Reflujo Gastroesofagico
+P94,8,Trastornos Del Tono Muscular Del Recien Nacido
+I01,8,Fiebre Reumatica Con Complicacion Cardiaca
+R06,8,Anormalidades De La Respiracion
+Q78,8,Otras Osteocondrodisplasias
+B39,8,Histoplasmosis
+K05,8,Gingivitis Y Enfermedades Periodontales
+E41,8,Marasmo Nutricional
+K28,8,Ulcera Gastroyeyunal
+N70,8,Salpingitis Y Ooforitis
+I06,8,Enfermedades Reumaticas De La Valvula Aortica
+N73,8,Otras Enfermedades Pelvicas Inflamatorias Femeninas
+E23,8,Hipofuncion Y Otros Trastornos De La Glandula Hipofisis
+X04,8,Exposicion A Ignicion De Material Altamente Inflamable
+I15,7,Hipertension Secundaria
+M51,7,Otros Trastornos De Los Discos Intervertebrales
+Q27,7,Otras Malformaciones Congenitas Del Sistema Vascular Periferico
+V62,7,Ocupante De Vehiculo De Transporte Pesado Lesionado Por Colision Con Vehiculo De Motor De Dos O Tres Ruedas
+I07,7,Enfermedades Reumaticas De La Valvula Tricuspide
+N25,7,Trastornos Resultantes De La Funcion Tubular Renal Alterada
+A40,7,Sepsis estreptocócica
+B55,7,Leishmaniasis
+B48,7,"Otras Micosis, No Clasificadas En Otra Parte"
+X81,7,Lesion Autoinflingida Intencionalmente Por Arrojarse O Colocarse Delante De Objeto En Movimiento
+E80,7,Trastornos Del Metabolismo De Las Porfirinas Y De La Bilirrubina
+V79,7,"Ocupante De Autobus Lesionado En Otros Accidentes De Transporte, Y En Los No Especificados"
+V91,7,Accidente De Embarcacion Que Causa Otros Tipos De Traumatismo
+A48,7,Otras Enfermedades Bacterianas No Clasificadas En Otra Parte
+F82,7,Trastorno especÍfico del desarrollo de la función motriz
+M48,7,Otras Espondilopatias
+B16,7,Hepatitis Aguda Tipo B
+R19,7,Otros Sintomas Y Signos Que Involucran El Sistema Digestivo Y El Abdomen
+I45,7,Otros Trastornos De La Conduccion
+D62,7,Anemia Posthemorragica Aguda
+N82,7,Fistulas Que Afectan El Tracto Genital Femenino
+I86,6,Varices De Otros Sitios
+O13,6,Hipertension Gestacional [Inducida Por El Embarazo] 
+W30,6,Contacto Traumatico Con Maquinaria Agricola
+Q32,6,Malformaciones Congenitas De La Traquea Y De Los Bronquios
+D65,6,Coagulacion Intravascular Diseminada [sindrome de desfibrinacion]
+K37,6,"Apendicitis, No Especificada"
+D06,6,Carcinoma In Situ Del Cuello Del Utero
+C39,6,Tumor Maligno De Otros Sitios Y De Los Mal Definidos Del Sistema Respiratorio Y De Los Organos Intratoracicos
+K12,6,Estomatitis Y Lesiones Afines
+V74,6,Ocupante De Autobus Lesionado Por Colision Con Vehiculo De Transporte Pesado O Autobus
+X97,6,"Agresion Con Humo, Fuego Y Llamas"
+C66,6,Tumor Maligno Del Ureter
+B54,6,Paludismo [ Malaria ] No Especificado
+B25,6,Enfermedad Debida A Virus Citomegalico
+R07,6,Dolor De Garganta Y En El Pecho
+G72,6,Otras Miopatias
+J05,6,Laringitis Obstructiva Aguda [Crup] Y Epiglotitis
+C65,6,Tumor Maligno De La Pelvis Renal
+R10,6,Dolor Abdominal Y Pelvico
+W81,6,Confinado O Atrapado En Un Ambiente Con Bajo Contenido De Oxigeno
+X76,6,"Lesion Autoinflingida Intencionalmente Por Humo, Fuego Y Llamas"
+D02,6,Carcinoma In Situ Del Sistema Respiratorio Y Del Oido Medio
+N83,6,"Trastornos No Inflamatorios Del Ovario, De La Trompa De Falopio Y Del Ligamento Ancho"
+D73,6,Enfermedades Del Bazo
+A32,6,Listeriosis
+Y69,6,Incidentes No Especificados Durante La Atencion Medica Y Quirurgica
+D86,6,Sarcoidosis
+W23,6,"Atrapado, Aplastado, Trabado O Apretado En O Entre Objetos"
+F50,6,Trastornos de la ingestión de alimentos
+E24,6,Sindrome De Cushing
+B15,6,Hepatitis Aguda Tipo A
+G81,6,Hemiplejia
+D00,5,"Carcinoma In Situ De La Cavidad Bucal, Del Esofago Y Del Estomago"
+Y45,5,"Efectos Adversos De Drogas Analgesicas, Antipireticas Y Antiinflamatorias"
+J65,5,Neumoconiosis asociada con tuberculosis
+Q40,5,Otras Malformaciones Congenitas De La Parte Superior Del Tubo Digestivo
+Q64,5,Otras Malformaciones Congenitas Del Sistema Urinario
+D72,5,Otros Trastornos De Los Leucocitos
+P76,5,Otras Obstrucciones Intestinales Del Recien Nacido
+O45,5,Desprendimiento Prematuro De La Placenta [Abruptio Placentae]
+K45,5,Otras Hernias De La Cavidad Abdominal
+K60,5,Fisura Y Fistula De Las Regiones Anal Y Rectal
+J13,5,Neumonia Debida A Streptococcus Pneumoniae
+X85,5,"Agresion Con Drogas, Medicamentos Y Sustancias Biologicas"
+V05,5,Peaton Lesionado Por Colision Con Tren O Vehiculo De Rieles
+C86,5,Otros tipos especificados de linfoma de células T/NK
+V26,5,Motociclista Lesionado Por Colision Con Otros Vehiculo Sin Motor
+I09,5,Otras Enfermedades Reumaticas Del Corazon
+J36,5,Absceso Periamigdalino
+E22,5,Hiperfuncion De La Glandula Hipofisis
+Q81,5,Epidermolisis Bullosa
+O86,5,Otras Infecciones Puerperales
+O90,5,"Complicaciones Del Puerperio, No Clasificadas En Otra Parte"
+R55,5,Sincope Y Colapso
+Q34,5,Otras Malformaciones Congenitas Del Sistema Respiratorio
+D01,5,Carcinoma In Situ De Otros Organos Digestivos Y De Los No Especificados
+Q01,5,Encefalocele
+M17,5,Gonartrosis [Artrosis De La Rodilla]
+X25,5,Contacto Traumatico Con Otros Artropodos Venenosos 
+Q63,5,Otras Malformaciones Congenitas Del Rinon
+Q75,4,Otras Malformaciones Congenitas De Los Huesos Del Craneo Y De La Cara
+N30,4,Cistitis
+N61,4,Trastornos Inflamatorios De La Mama
+Y61,4,Objeto Extraño Dejado Accidentalmente En El Cuerpo Durante La Atencion Medica Y Quirurgica
+N11,4,Nefritis Tubulointersticial Cronica
+O71,4,Otro Trauma Obstetrico
+O02,4,Otros Productos Anormales De La Concepcion
+R50,4,Fiebre De Otro Origen Y De Origen Desconocido
+Y27,4,"Contacto Con Vapor De Agua, Vapores Y Objetos Calientes, De Intencion No Determinada"
+W05,4,Caida Que Implica Silla De Ruedas
+X83,4,Lesion Autoinflingida Intencionalmente Por Otros Medios Especificados
+D51,4,Anemia Por Deficiencia De Vitamina B12
+C88,4,Enfermedades Inmunoproliferativas Malignas
+F31,4,Trastorno Afectivo Bipolar
+Q77,4,Osteocondrodisplasia Con Defecto Del Crecimiento De Los Huesos Largos Y De La Columna Vertebral
+P04,4,Feto Y Recien Nacido Afectados Por Influencias Nocivas Transmitidas A Traves De La Placenta O De La Leche Materna
+D29,4,Tumor Benigno De Los Organos Genitales Masculinos
+X65,4,"Envenenamiento Autoinflingido Intencional Por, Y Exposicion Al Alcohol"
+G98,4,"Otros Trastornos Sistema Nervioso, No Clasificados En Otra Parte"
+E71,4,Trastornos Del Metabolismo De Los Aminoacidos De Cadena Ramificada Y De Los Acidos Grasos
+E42,4,Kwashiorkor Marasmatico
+B51,4,Paludismo [ Malaria ] Debido A Plasmodium Vivax
+M87,4,Osteonecrosis
+B50,4,Paludismo [ Malaria ] Debido A Plasmodium Falciparum
+Y17,4,"Envenenamiento Por, Y Exposicion A Otros Gases Y Vapores, De Intencion No Determinada"
+P90,4,Convulsiones Del Recien Nacido
+V94,4,"Otros Accidentes De Transporte Por Agua, Y Los No Especificados"
+N21,4,Calculo De Las Vias Urinarias Inferiores
+R41,4,Otros Sintomas Y Signos Que Involucran La Funcion Cognoscitiva Y La Conciencia
+D14,4,Tumor Benigno Del Oido Medio Y Del Sistema Respiratorio
+Q80,4,Ictiosis Congenita
+M47,4,Espondilosis
+N34,4,Uretritis Y Sindrome Uretral
+E74,4,Otros Trastornos Del Metabolismo De Los Carbohidratos
+D09,4,Carcinoma In Situ De Otros Sitios Y De Los No Especificados
+O43,4,Trastornos Placentarios
+X72,4,Lesion Autoinflingida Intencionalmente Por Disparo De Arma Corta
+C03,4,Tumor Maligno De La Encia
+C63,4,Tumor Maligno De Otros Organos Genitales Masculinos Y De Los No Especificados
+P59,4,Ictericia Neonatal Por Otras Causas Y Por Las No Especificadas
+E51,4,Deficiencia De Tiamina
+V33,4,"Ocupante De Vehiculo De Motor De Tres Ruedas Lesionado Por Colision Con Automovil, Camioneta O Furgoneta"
+V96,4,"Accidente De Aeronave Sin Motor, Con Ocupante Lesionado"
+L30,3,Otras Dermatitis
+H05,3,Trastornos De La Orbita
+W22,3,Golpe Contra O Golpeado Por Otros Objetos
+D21,3,Otros Tumores Benignos Del Tejido Conjuntivo Y Tejidos Blandos
+V63,3,"Ocupante De Vehiculo De Transporte Pesado Lesionado Por Colision Con Automovil, Camioneta O Furgoneta"
+L01,3,Impetigo
+E77,3,Trastornos Del Metabolismo De Las Glucoproteinas
+G45,3,Ataques de isquemia cerebral transitoria y síndromes afines
+A94,3,"Fiebre Viral Transmitida Por Artropodos, No Especificada"
+L88,3,Pioderma Gangrenoso
+A53,3,Otras Sifilis Y Las No Especificadas
+I78,3,Enfermedades De Los Vasos Capilares
+X11,3,Contacto Con Agua Caliente Corriente
+W75,3,Sofocacion Y Estrangulamiento Accidental En La Cama
+X30,3,Exposicion Al Calor Natural Excesivo
+O75,3,"Otras Complicaciones Del Trabajo De Parto Y Del Parto, No Clasificadas En Otra Parte"
+N80,3,Endometriosis
+W54,3,Mordedura O Ataque De Perro
+E34,3,Otros Trastornos Endocrinos
+F41,3,Otros Trastornos De Ansiedad
+P70,3,Trastornos Transitorios Del Metabolismo De Los Carbohidratos Especificos Del Feto Y Del Recien Nacido
+D52,3,Anemia Por Deficiencia De Folatos
+X13,3,Contacto Con Vapor De Agua Y Otros Vapores Calientes
+I28,3,Otras Enfermedades De Los Vasos Pulmonares
+M54,3,Dorsalgia
+F99,3,"Trastorno mental, no especificado"
+W25,3,Contacto Traumatico Con Vidrio Cortante
+E21,3,Hiperparatiroidismo Y Otros Trastornos De La Glandula Paratiroides
+Y41,3,Efectos Adversos De Otros Antiinfecciosos Y Antiparasitarios Sistemicos
+I99,3,Otros Trastornos Y Los No Especificados Del Sistema Circulatorio
+J00,3,Rinofaringitis Aguda [resfriado comun]
+V39,3,"Ocupante De Vehiculo De Motor De Tres Ruedas Lesionado En Otros Accidentes, Y En Los No Especificados"
+W16,3,Salto O Zambullida Dentro Del Agua Que Causa Otro Traumatismo Sin Sumersion O Ahogamiento
+Q96,3,Sindrome De Turner
+N63,3,Masa No Especificada En La Mama
+X22,3,Contacto Traumatico Con Escorpion
+J92,3,Paquipleuritis
+D60,3,"Aplasia Adquirida, Exclusiva De La Serie Roja [ Eritoblastopenia ]"
+O24,3,Diabetes Mellitus En El Embarazo
+Y65,3,Otros Incidentes Durante La Atencion Medica Y Quirurgica
+D12,3,"Tumor Benigno Del Colon, Del Recto, Del Conducto Anal Y Del Ano"
+X90,3,Agresion Con Productos Quimicos Y Sustancias Nocivas No Especificados
+J61,3,Neumoconiosis Debida Al Asbesto Y A Otras Fibras Minerales
+L12,3,Penfigoide
+O44,3,Placenta Previa
+X10,3,"Contacto Con Bebidas, Alimentos, Grasas Y Aceites Para Cocinar, Calientes"
+Q37,2,Fisura Del Paladar Con Labio Leporino
+X02,2,Exposicion A Fuego Controlado En Edificio U Otra Construccion
+P15,2,Otros Traumatismos Del Nacimiento
+A54,2,Infeccion Gonococica
+Y89,2,Secuelas De Otras Causas Externas
+K58,2,Sindrome Del Colon Irritable
+B52,2,Paludismo [ Malaria ] Debido A Plasmodium Malariae
+W35,2,Explosion Y Rotura De Caldera
+V37,2,Ocupante De Vehiculo De Motor De Tres Ruedas Lesionado Por Colision Con Objeto Fijo O Estacionado
+G60,2,Neuropatía hereditaria e idiopática
+R22,2,"Tumefaccion, Masa O Prominencia De La Piel Y Del Tejido Subcutaneo Localizado"
+I37,2,Trastornos De La Valvula Pulmonar
+Y82,2,"Otros Dispositivos Medicos Y Los No Especificados, Asociados Con Incidentes Adversos"
+J06,2,"Infecciones Agudas De Las Vias Respiratorias Superiores, De Sitios Multiples O No Especificados"
+D26,2,Otros Tumores Benignos Del Utero
+O41,2,Otros Trastornos Del Liquido Amniotico Y De Las Membranas
+Q35,2,Fisura Del Paladar
+O22,2,Complicaciones Venosas y Hemorroides En El Embarazo
+L00,2,Sindrome Estafilococico De La Piel Escaldada
+E07,2,Otros Trastornos Tiroideos
+C58,2,Tumor Maligno De La Placenta
+E15,2,Coma Hipoglicemico No Diabetico
+Y16,2,"Envenenamiento Por, Y Exposicion A Disolventes Organicos E Hidrocarburos Halogenados Y Sus Vapores, De Intencion No Determinada"
+I00,2,Fiebre Reumatica Sin Mencion De Complicacion Cardiaca
+K11,2,Enfermedades De Las Glandulas Salivales
+F23,2,Trastornos Psicoticos Agudos Y Transitorios
+N71,2,"Enfermedad Inflamatoria Del Utero, Excepto Del Cuello Uterino"
+X43,2,"Envenenamiento Accidental Por, Y Exposicion A Otras Drogas Que Actuan Sobre El Sistema Nervioso Autonomo"
+J41,2,Bronquitis Cronica Simple Y Mucopurulenta
+W21,2,Golpe Contra O Golpeado Por Equipo Para Deportes
+V92,2,"Ahogamiento Y Sumersion Relacionados Con Transporte Por Agua, Sin Accidente  A La Embarcacion"
+D16,2,Tumor Benigno Del Hueso Y Del Cartilago Articular
+O25,2,Desnutricion En El Embarazo
+X63,2,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Otras Drogas Que Actuan Sobre El Sistema Nervioso Autonomo"
+P80,2,Hipotermia Del Recien Nacido
+D80,2,Inmunodeficiencia Con Predominio De Defectos De Los Anticuerpos
+B43,2,Cromomicosis Y Absceso Feomicotico
+W27,2,Contacto Traumatico Con Herramientas Manuales Sin Motor
+X46,2,"Envenenamiento Accidental Por, Y Exposicion A Disolventes Organicos E Hidrocarburos Halogenados Y Sus Vapores"
+Y43,2,Efectos Adversos De Agentes Sistemicos Primarios
+F44,2,Trastornos disociativos [de conversión]
+W45,2,Cuerpo Extraño Que Penetra A Traves De La Piel
+X14,2,Contacto Con Aire Y Gases Calientes
+Y73,2,"Dispositivos De Gastroenterologia Y Urologia, Asociados Con Incidentes Adversos"
+B77,2,Ascariasis
+J01,2,Sinusitis Aguda
+N01,2,Sindrome Nefritico Rapidamente Progresivo
+R26,2,Anormalidades De La Marcha Y De La Movilidad
+V53,2,"Ocupante De Camioneta O Furgoneta Lesionado Por Colision Con Automovil, Camioneta Furgoneta"
+Y31,2,"Caida, Permanencia O Carrera Delante O Hacia Objeto En Movimiento, De Intencion No Determinada"
+M41,2,Escoliosis
+W28,2,"Contacto Traumatico Con Cortadora De Cesped, Con Motor"
+V97,2,Otros Accidentes De Transporte Aereo Especificados
+X60,2,"Envenenamiento Autoinflingido Intencionalmente Por, Y Exposicion A Analgesicos No Narcoticos, Antipireticos Y Antirreumaticos"
+R73,2,Nivel Elevado De Glucosa En Sangre
+W37,2,"Explosion Y Rotura De Neumatico, Tubo O Manguera De Goma Presurizada"
+N48,2,Otros Trastornos Del Pene
+O87,2,Complicaciones Venosas y Hemorroides En El Puerperio
+O97,2,Muerte Por Secuelas De Causas Obstetricas 
+E70,2,Trastornos Del Metabolismo De Los Aminoacidos Aromaticos
+W56,2,Contacto Traumatico Con Animales Marinos
+J82,2,Eosinofilia Pulmonar No Clasificada En Otra Parte
+Q62,2,Defectos Obstructivos Congenitos De La Pelvis Renal Y Malformaciones Congenitas Del Ureter
+M50,2,Trastornos De Disco Cervical
+N50,2,Otros Trastornos De Los Organos Genitales Masculinos
+H44,2,Trastornos Del Globo Ocular
+M15,2,Poliartrosis
+V52,2,Ocupante De Camioneta O Furgoneta Lesionado Por Colision Con Vehiculo De Motor De Dos O Tres Ruedas
+J34,2,Otros Trastornos De La Nariz Y De Los Senos Paranasales
+R58,2,"Hemorragia, No Clasificadas En Otra Parte"
+R42,1,Mareo Y Desvanecimiento
+B89,1,"Enfermedad Parasitaria, No Especificada"
+N07,1,Nefropatia Hereditaria No Clasificada En Otra Parte
+A56,1,Otras Enfermedades De Transmision Sexual Debidadas A Clamidias
+D36,1,Tumor Benigno De Otros Sitios Y De Los No Especificados
+V66,1,Ocupante De Vehiculo De Transporte Pesado Lesionado Por Colision Con Otro Vehiculo Sin Motor
+P58,1,Ictericia Neonatal Debida A Otras Hemolisis Excesivas
+V32,1,Ocupante De Vehiculo De Motor De Tres Ruedas Lesionado Por Colision Con Vehiculo De Motor De Dos O Tres Ruedas
+V73,1,Ocupante De Autobus Lesionado Por Colision Con Auto Camioneta O Furgoneta
+B38,1,Coccidioidomicosis
+W83,1,Otras Obstrucciones Especificadas De La Respiracion
+A51,1,Sifilis Precoz
+V34,1,Ocupante De Vehiculo De Motor De Tres Ruedas Lesionado Por Colision Con Vehiculo De Transporte Pesado O Autobus
+E26,1,Hiperaldosteronismo
+D56,1,Talasemia
+N36,1,Otros Trastornos De La Uretra
+Y03,1,Agresion Por Colision Vehiculo De Motor
+M30,1,Poliarteritis Nudosa Y Afecciones Relacionadas
+B05,1,Sarampion
+V93,1,"Accidente En Una Embarcacion, Sin Accidente A La Embarcacion, Que No Causa Ahogamiento Y Sumersion"
+X03,1,Exposicion A Fuego Controlado En Lugar Que No Es Edificio U Otra Construccion
+F43,1,Reacción al estrés grave y trastornos de adaptación
+A93,1,"Otras Fiebre Virales Transmitidas Por Artropodos, No Clasificadas En Otra Parte"
+V85,1,Ocupante De Vehículo Especial (De Motor) Para Construcción Lesionado En Accidente De Transporte
+I88,1,Linfadenitis Inespecifica
+V83,1,Ocupante De Vehiculo Especial (De Motor) Para Uso Principalmente Industrial Lesionado En Accidente De Transporte
+A03,1,Shigelosis
+Y48,1,Efectos Adversos De Gases Anestesicos Y Terapeuticos
+O23,1,Infecciones De Las Vias Genitourinarias En El Embarazo
+X89,1,Agresion Con Otros Productos Quimicos Y Sustancias Nocivas Especificadas
+N85,1,"Otros Trastornos No Inflamatorios Del Utero, Excepto Del Cuello"
+O21,1,Vomitos Excesivos Del Embarazo
+O05,1,Otro Aborto
+M45,1,Espondilitis Anquilosante
+L55,1,Quemadura Solar
+C12,1,Tumor Maligno Del Seno Piriforme
+B41,1,Paracoccidioidomicosis
+L50,1,Urticaria
+D55,1,Anemia Debida A Trastornos Enzimaticos
+P71,1,Trastornos Neonatales Transitorios Del Metabolismo Del Calcio Y Del Magnesio
+R63,1,Sintomas Y Signos Concernientes A La Alimentacion Y A La Ingestion De Liquidos
+V98,1,Otros Accidentes De Transporte Especificados
+V86,1,Ocupante De Vehículo Especial Para Todo Terreno o de otro vehículo de motor para uso fuera de la carretera lesionado en accidente de transporte
+J14,1,Neumonia Debida A Haemophilus Influenzae
+B46,1,Cigomicosis
+E45,1,Retardo Del Desarrollo Debido A Desnutricion Proteicocalorica
+A05,1,Otras Intoxicaciones Alimentarias Bacterianas No Clasificadas En Otra Parte
+E63,1,Otras Deficiencias Nutricionales
+J63,1,Neumoconiosis Debida A Otros Polvos Inorganicos
+R00,1,Anormalidades Del Latido Cardiaco
+Y49,1,Efectos Adversos De Drogas Psicotropicas No Clasificadas En Otra Parte
+W29,1,"Contacto Traumatico Con Otras Herramientas Manuales Y Artefactos De Hogar, Con Motor"
+L53,1,Otras Afecciones Eritematosas
+L87,1,Trastornos De La Eliminacion Transepidermica
+A43,1,Nocardiosis
+O42,1,Ruptura Prematura De Las Membranas
+Y23,1,"Disparo De Rifle, Escopeta Y Arma Larga, De Intencion No Determinada"
+Y58,1,Efectos Adversos De Vacunas Bacterianas
+F84,1,Trastornos generalizados del desarrollo
+Q82,1,Otras Malformaciones Congenitas De La Piel
+D27,1,Tumor Benigno Del Ovario
+P53,1,Enfermedad Hemorragica Del Feto Y Del Recien Nacido
+B40,1,Blastomicosis
+X50,1,Exceso De Esfuerzo Y Movimientos Extenuantes Y Repetitivos
+Q86,1,Sindromes De Malformaciones Congenitas Debidos A Causas Exogenas Conocidas No Clasificadas En Otra Parte
+W08,1,Caida Que Implica Otro Mueble
+R64,1,Caquexia
+N02,1,Hematuria Recurrente Y Persistente
+W64,1,"Exposicion A Otras Fuerzas Mecanicas Animadas, Y Las No Especificadas"
+V82,1,Ocupante De Tranvia Lesionado En Accidente De Transporte
+A07,1,Otras Enfermedades Intestinales Debidas A Protozoarios
+V38,1,Ocupante De Vehiculo De Motor De Tres Ruedas Lesionado En Accidente De Transito Sin Colision
+A55,1,Linfogranuloma (Venereo) Por Clamidias
+O63,1,Trabajo De Parto Prolongado
+J66,1,Enfermedades De Las Vias Aereas Debidas A Polvos Organicos Especificos
+L26,1,Dermatitis Exfoliativa
+A98,1,"Otras Fiebres Virales Hemorragicas, No Clasificadas En Otra Parte"
+A92,1,Otras Fiebres Virales Transmitidas Por Mosquitos
+A01,1,Fiebres Tifoidea Y Paratifoidea
+X75,1,Lesion Autoinflingida Intencionalmente Por Material Explosivo
+Q36,1,Labio Leporino
+V25,1,Motociclista Lesionado Por Colision Con Tren O Vehiculo De Rieles
+M99,1,"Lesiones Biomecanicas, No Clasificadas En Otra Parte"
+A42,1,Actinomicosis
+X39,1,"Exposicion A Otras Fuerzas De La Naturaleza, Y Las No Especificadas"
+W38,1,Explosion Y Rotura De Otros Dispositivos Presurizados Especificados
+V56,1,Ocupante De Camioneta O Furgoneta Lesionado Por Colision Con Otros Vehiculos Sin Motor
+X82,1,Lesion Autoinflingida Intencionalmente Por Colision De Vehiculo De Motor
+Y36,1,Operaciones De Guerra
+Y02,1,Agresion Por Empujar O Colocar A La Victima Delante De Objeto En Movimiento
+Y76,1,"Dispositivos Ginecologicos Y Obstetricos, Asociados Con Incidentes Adversos"
+G43,1,Migraña
+D04,1,Carcinoma In Situ De La Piel
+B74,1,Filariasis
+X06,1,Exposicion A Ignicion O Fusion De Otras Ropas Y Accesorios
+L95,1,"Vasculitis Limitada A La Piel, No Clasificadas En Otra Parte"
+P10,1,Hemorragia Y Laceracion Intracraneal Debidas A Traumatismo Del Nacimiento
+V16,1,Ciclista Lesionado Por Colision Con Otros Vehiculos Sin Motor
+V42,1,Ocupante De Automovil Lesionado Por Colision Con Vehiculo De Motor De Dos O Tres Ruedas
+P92,1,Problemas De La Ingestion De Alimentos Del Recien Nacido
+B76,1,Anquilostomiasis Y Necatoriasis
+B26,1,Parotiditis Infecciosa
+W50,1,"Aporreo, Golpe, Mordedura, Patada, Rasguno O Torcedura Infligidos Por Otra Persona"
+W65,1,Ahogamiento Y Sumersion Mientras Se Esta En La Bañera
+Y52,1,Efectos Adversos De Agentes Que Afectan Primariamente El Sistema Cardiovascular
+Y40,1,Efectos Adversos De Antibioticos Sistemicos
+Y51,1,Efectos Adversos De Drogas Que Afectan Primariamente El Sistema Nervioso Autonomo
+X26,1,Contacto Traumatico Con Animales Y Plantas Marinas Venenosos
+Y46,1,Efectos Adversos De Drogas Antiepilepticas Y Antiparkinsonianas
+X87,1,Agresion Con Plaguicidas
+V70,1,Ocupante De Autobus Lesionado Por Colision Con Peaton O Animal
+B78,1,Estrongiloidiasis
+D34,1,Tumor Benigno De La Glandula Tiroides
+M08,1,Artritis Juvenil
+V40,1,Ocupante De Automovil Lesionado Por Colision Con Peaton O Animal
+V46,1,Ocupante De Automovil Lesionado Por Colision Con Otros Vehiculos Sin Motor
+P13,1,Traumatismo Del Esqueleto Durante El Nacimiento
+X21,1,Contacto Traumatico Con Arañas Venenosas
+N26,1,"Riñon Contraido, No Especificado"
+B83,1,Otras Helmintiasis
+Y79,1,"Dispositivos Ortopedicos, Asociados Con Incidentes Adversos"
+P93,1,Reacciones E Intoxicaciones Debidas A Drogas Administradas Al Feto Y Al Recien Nacido
+X88,1,Agresion Con Gases Y Vapores
+X31,1,Exposicion Al Frio Natural Excesivo
+F29,1,"Psicosis De Origen No Organico, No Especificada"
+E06,1,Tiroiditis

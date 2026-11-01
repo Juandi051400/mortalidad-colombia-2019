@@ -29,18 +29,30 @@ Python 3.14.0. Las versiones de los paquetes están registradas en requirements.
 - `src/explorar_datos.py`: exploración de hojas, categorías, conteos y correspondencias.
 - `data/geo/`: cartografía departamental del DANE, versión 2018, descargada con simplificación.
 - `data/raw/`: copias sin modificar de los Excel, excluidas de Git.
-- `data/processed/`: carpeta destinada a futuros archivos derivados.
+- `data/processed/`: ocho CSV estadísticos utilizados por la aplicación.
+- `src/preparar_publicacion.py`: genera los CSV desde los anexos locales y comprueba sus totales.
+- `src/datos_publicacion.py`: lee los CSV, conserva los códigos como texto y convierte las cantidades a enteros.
+- `assets/estilos.css`: estilos del encabezado y las tarjetas.
+- `.python-version`: versión de Python indicada para Render.
 - `requirements.txt`: paquetes y versiones del entorno.
 
-## Datos de entrada
+## Datos de entrada y reproducción
 
-Se utilizan los tres archivos Excel proporcionados para la actividad:
+La aplicación lee ocho CSV estadísticos de `data/processed/` y la cartografía de `data/geo/`. Los CSV contienen resúmenes separados para las visualizaciones y una lista de municipios de referencia.
+
+Para regenerar estos archivos se utilizan los tres Excel proporcionados para la actividad:
 
 - `Anexo1.NoFetal2019_CE_15-03-23.xlsx`: base de defunciones.
 - `Anexo2.CodigosDeMuerte_CE_15-03-23.xlsx`: catálogo de códigos y nombres de causas de muerte.
 - `Divipola_CE_.xlsx`: códigos y nombres de departamentos y municipios.
 
-Los archivos se ubican en `data/raw/`.
+Los Excel originales se conservan en `data/raw/`, excluida de Git. El arranque de la aplicación utiliza los CSV preparados.
+
+Con el entorno de desarrollo preparado y los Excel disponibles, los resúmenes se regeneran desde la raíz del proyecto mediante:
+
+`.\.venv\Scripts\python.exe -m src.preparar_publicacion`
+
+El preparador comprueba los totales correspondientes a cada resumen. El lector conserva los códigos como texto y convierte MES/CASOS a enteros.
 
 Documentación de referencia: [DANE — Estadísticas Vitales 2019](https://microdatos.dane.gov.co/index.php/catalog/696).
 
