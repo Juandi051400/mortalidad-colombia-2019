@@ -12,13 +12,13 @@ Explorar la mortalidad en Colombia durante 2019 mediante visualizaciones de su d
 
 ## Estado del proyecto
 
-En desarrollo. La aplicación local muestra siete vistas: evolución mensual, mapa departamental, barras por sexo y departamento, distribución por edad, tabla de diez causas, barras de cinco municipios por X95 y circular municipal.
+La aplicación muestra siete vistas: evolución mensual, mapa departamental, barras por sexo y departamento, distribución por edad, tabla de diez causas, barras de cinco municipios por X95 y circular municipal.
 
 La base contiene 244.355 registros, incluidos 93 de sexo indeterminado y 23 de edad desconocida. Las vistas de principales causas y municipios muestran los subconjuntos indicados en sus títulos.
 
-Existe una versión publicada en [Render](https://mortalidad-colombia-2019-rqso.onrender.com/), con las siete visualizaciones y el filtro de mensual/edad. El último hito público confirmado es `79478cc`; el diseño local descrito a continuación tiene cambios posteriores cuya publicación aún no está confirmada.
+La aplicación está publicada en [Render](https://mortalidad-colombia-2019-rqso.onrender.com/). El código del diseño por secciones y de la revisión corresponde al hito `f7c3d28`, subido y comprobado en línea con las siete vistas y los dos filtros independientes.
 
-El dashboard local organiza las siete visualizaciones en tarjetas, adapta su distribución al ancho de la ventana y tiene tres secciones:
+El dashboard organiza las siete visualizaciones en tarjetas, adapta su distribución al ancho de la ventana y tiene tres secciones:
 
 | Sección | Vistas y alcance |
 | --- | --- |
@@ -30,7 +30,7 @@ Los dos filtros son independientes y recuerdan su selección al volver entre sec
 
 Las gráficas ocupan marcos dimensionados mediante CSS. En Panorama, el marco de las barras por sexo utiliza 1050 px para Colombia; al consultar un departamento, el callback ajusta ese marco a 340 px. Al volver a Colombia, la altura vuelve a estar definida por el CSS.
 
-La versión local se comprobó después de los ajustes de mantenimiento: sintaxis, arranque y regreso de un departamento a Colombia en Panorama. Su publicación actualizada, las capturas e interpretaciones y la prueba de instalación desde una copia nueva siguen pendientes. No hay entrega confirmada.
+La versión se comprobó en local y en Render, incluidos los filtros independientes y el regreso de un departamento a Colombia en Panorama, con recuperación de las 33 barras. La sección de visualizaciones documenta las siete vistas mediante cinco capturas propias y sus interpretaciones, además de dos capturas con Antioquia seleccionado: una de Consulta departamental y otra de Panorama nacional. Las visualizaciones y sus resultados fueron revisados por el autor. También se comprobó la instalación y el arranque desde una copia nueva, con entorno propio y sin los Excel originales; el autor confirmó las vistas y los filtros en esa copia.
 
 ## Entorno de desarrollo
 
@@ -60,6 +60,7 @@ El descargador opcional de cartografía utiliza Requests 2.34.2. Las dependencia
 - `src/preparar_publicacion.py`: genera los CSV desde los anexos locales y comprueba sus totales.
 - `src/datos_publicacion.py`: lee los CSV, conserva los códigos como texto y convierte las cantidades a enteros.
 - `assets/estilos.css`: estilos del encabezado, navegación, tarjetas y alturas de los marcos. El callback de Panorama ajusta la altura de sexo para el detalle departamental.
+- `docs/capturas/`: carpeta destinada a las capturas de la versión publicada.
 - `.python-version`: versión de Python indicada para Render.
 - `requirements.txt`: paquetes y versiones del entorno.
 
@@ -112,7 +113,11 @@ Para volver a ejecutar una copia que ya tiene su entorno y dependencias, abre Po
 .\.venv\Scripts\python.exe .\app.py
 ```
 
-La comprobación de instalación desde una copia nueva sigue pendiente; estas instrucciones no se presentan como una prueba ya realizada.
+### Comprobación realizada desde una copia nueva
+
+El 1 de noviembre de 2026 se comprobó una copia separada del repositorio en Windows con Python 3.14.0, dentro de la carpeta `mortalidad-colombia-2019-prueba`. Se creó su propio entorno `.venv`, se instalaron las dependencias de `requirements.txt` y se ejecutó `app.py` con el intérprete de esa copia.
+
+La instalación terminó con `Successfully installed` y el servidor mostró `Dash is running on http://127.0.0.1:8050/`. El autor abrió la aplicación y confirmó que las vistas y los filtros funcionaban como en la versión revisada. La copia no contiene `data/raw/`: utiliza los CSV y el GeoJSON incluidos en el repositorio. La copia de trabajo y su entorno se conservaron.
 
 ## Datos de entrada y reproducción
 
@@ -156,7 +161,7 @@ Render permite fijar la versión de Python mediante `.python-version`, como se d
 
 Después de completar los campos, se inició el despliegue y se esperó el estado **Live**. La URL del servicio es [mortalidad-colombia-2019-rqso.onrender.com](https://mortalidad-colombia-2019-rqso.onrender.com/).
 
-Para cada actualización, se deben subir los cambios a `main`, revisar el despliegue correspondiente en Render y comprobar la aplicación pública. El último hito público confirmado continúa siendo `79478cc`; el diseño local de tres secciones tiene su publicación pendiente.
+Para cada actualización, se suben los cambios a `main`, se revisa el despliegue correspondiente en Render y se comprueba la aplicación pública. Tras subir `f7c3d28`, se verificaron las tres secciones, los filtros independientes, el regreso al panorama de Colombia y las siete vistas con sus encabezados y notas.
 
 En la instancia Free, Render pausa el servicio después de 15 minutos sin tráfico. La siguiente visita lo reactiva y puede necesitar alrededor de un minuto para cargar. Estas condiciones están descritas en la [documentación actual de Render Free](https://render.com/docs/free).
 
@@ -188,6 +193,66 @@ Para la circular, ante la ausencia de una fórmula en el enunciado, se adopta el
 
 Guataquí, Pulí, Busbanzá y Jordán se informan aparte como municipios sin registros en esta base. Nuevo Belén de Bajirá se excluye de esa referencia de 2019 por su [creación en 2023](https://www.registraduria.gov.co/8-972-ciudadanos-estan-habilitados-para-votar-en-las-primeras-elecciones-de.html). Estos resultados describen registros de los anexos y no constituyen tasas de mortalidad.
 
-## Capturas e interpretaciones pendientes
+## Visualizaciones y resultados
 
-Faltan las capturas propias de las siete visualizaciones y de los filtros, junto con la descripción e interpretación de sus resultados. Se incorporarán después de comprobar la versión que se publique, utilizando los CSV del proyecto y conservando los alcances y límites explicados en este README.
+Las primeras cinco capturas muestran las siete visualizaciones de la aplicación publicada; las figuras 6 y 7 documentan Antioquia en cada una de las dos secciones con filtro. Se conservan los encuadres aportados por el autor: dos imágenes reúnen parejas de gráficos, con títulos, ejes, notas y leyendas visibles. Las cifras de las interpretaciones proceden de los CSV agregados del proyecto; los porcentajes se calculan sobre el total indicado y se redondean a un decimal.
+
+### Consulta departamental: evolución mensual y grupos de edad
+
+![Consulta departamental de Colombia: evolución mensual y distribución por grupos de edad](docs/capturas/01_consulta_colombia.png)
+
+*Figura 1. Consulta de Colombia con el selector, el indicador de 244.355 registros y las dos visualizaciones completas.*
+
+**Evolución mensual.** La línea distribuye 244.355 registros en doce meses: diciembre presenta el mayor conteo (21.678) y febrero el menor (17.974). Son cantidades mensuales, sin ajuste por su duración; esta comparación no demuestra estacionalidad ni explica sus causas. Fuente: [`mensual_2019.csv`](data/processed/mensual_2019.csv).
+
+**Distribución por edad.** Las barras conservan los once grupos definidos en el enunciado, incluida Edad desconocida (23 registros). Vejez reúne 115.453 y Longevidad / Centenarios 56.061; juntos suman 171.514 (70,2 % de 244.355). Los intervalos tienen distinta amplitud: las barras no representan edades individuales ni tasas comparables por año de edad. Fuente: [`edad_2019.csv`](data/processed/edad_2019.csv).
+
+### Panorama nacional: mapa departamental
+
+![Mapa de los registros por departamento en Colombia durante 2019, con escala de color](docs/capturas/02_mapa_departamental.png)
+
+*Figura 2. Panorama de Colombia con su selector independiente, mapa completo, escala de registros y nota cartográfica.*
+
+El mapa colorea los 33 territorios consignados en los anexos, incluido Bogotá, según su número de registros. Bogotá reúne 38.760 y Antioquia 34.473, los dos mayores conteos. La comparación utiliza cantidades absolutas, sin poblaciones territoriales; por tanto, no identifica dónde es mayor el riesgo de mortalidad. Fuente: [`departamental_2019.csv`](data/processed/departamental_2019.csv).
+
+### Panorama nacional: sexo y departamento
+
+![Barras apiladas por sexo en los 33 territorios, con leyenda y ejes completos](docs/capturas/03_sexo_departamental.png)
+
+*Figura 3. Distribución por sexo y departamento en la opción Colombia. Se incluyen las 33 barras y las tres categorías de la leyenda.*
+
+Las barras apiladas muestran la composición por sexo dentro de cada departamento; su longitud total corresponde al conteo del territorio. En el conjunto nacional hay 134.573 registros masculinos, 109.689 femeninos y 93 indeterminados. El predominio numérico masculino describe esta base y no equivale a una tasa de mortalidad por sexo. Fuente: [`sexo_departamental_2019.csv`](data/processed/sexo_departamental_2019.csv).
+
+### Diez principales causas
+
+![Tabla de las diez principales causas de mortalidad, con código CIE-10, nombre y casos](docs/capturas/04_causas_principales.png)
+
+*Figura 4. Tabla completa de las diez categorías CIE-10 con más registros, ordenadas de mayor a menor.*
+
+La tabla muestra el código, el nombre y el conteo de diez categorías CIE-10 de tres caracteres. I21, infarto agudo del miocardio, encabeza el ranking con 35.323 registros, seguido de J44 con 15.804; las diez reúnen 93.724 (38,4 % de la base). Es un ranking de frecuencias de categorías que agrupan códigos más detallados; la tabla no explica los factores que originan esas diferencias. Fuente: [`causas_2019.csv`](data/processed/causas_2019.csv), primeras diez filas.
+
+### Municipios: mayores conteos X95 y menores conteos positivos
+
+![Barras de los cinco municipios con más casos X95 y circular de los diez municipios con menor conteo positivo](docs/capturas/05_municipios_x95_y_menores.png)
+
+*Figura 5. Dos selecciones municipales con alcances distintos: X95 y sus subcódigos a la izquierda; todas las causas entre municipios con conteos positivos a la derecha. La circular conserva su leyenda y la nota sobre municipios sin registros.*
+
+**Cinco municipios por X95.** Las barras presentan los mayores conteos de X95 y sus subcódigos: Santiago de Cali 971, Bogotá 601, Medellín 428, Barranquilla 260 y San José de Cúcuta 206. Reúnen 2.466 de los 9.273 registros X95 (26,6 %). Este subconjunto no equivale al total de homicidios ni mide una tasa por habitante. Fuente: [`x95_municipal_2019.csv`](data/processed/x95_municipal_2019.csv), primeras cinco filas y total del archivo.
+
+**Municipios con menor conteo positivo.** La circular representa once registros de diez municipios: nueve aportan uno y Abriaquí dos. Los porcentajes son 9,1 % para cada municipio con un registro y 18,2 % para Abriaquí, calculados sobre esos once, no sobre 244.355. Esta selección no constituye una tasa; los cuatro municipios sin registros, informados aparte, no prueban cero muertes reales. Fuentes: [`menores_municipios_2019.csv`](data/processed/menores_municipios_2019.csv) y [`municipios_sin_registros_2019.csv`](data/processed/municipios_sin_registros_2019.csv).
+
+### Consulta departamental: ejemplo del filtro
+
+![Consulta de Antioquia con selector, indicador de 34.473 registros y gráficas mensual y de edad completas](docs/capturas/06_consulta_antioquia.png)
+
+*Figura 6. Estado de Consulta departamental al seleccionar Antioquia.*
+
+El selector muestra Antioquia y el indicador presenta 34.473 registros. Los títulos de la línea mensual y de la distribución por edad identifican ese mismo departamento. Frente a la consulta de Colombia de la figura 1, esta imagen documenta el cambio de alcance de las dos gráficas y del indicador; el encabezado general conserva el total nacional de 244.355 registros. El filtro de Panorama nacional tiene su propio alcance, descrito en la sección Estado del proyecto.
+
+### Panorama nacional: ejemplo de su filtro
+
+![Panorama con Antioquia seleccionado: indicador de 34.473 registros, mapa departamental y barra apilada por sexo](docs/capturas/07_panorama_antioquia.png)
+
+*Figura 7. Panorama con Antioquia seleccionado. Se muestran el mapa y la barra por sexo del departamento; el encabezado conserva sus indicadores nacionales.*
+
+Al seleccionar Antioquia en el control de Panorama nacional, el indicador presenta 34.473 registros, el mapa muestra solo su contorno departamental y ajusta el encuadre para verlo ampliado, y las barras nacionales se sustituyen por una barra apilada del departamento. La leyenda conserva Masculino, Femenino e Indeterminado. El acercamiento del mapa cambia la vista, conservando los conteos. Este selector controla el mapa y las barras de esta sección; Consulta departamental utiliza su propio filtro. Frente al panorama de Colombia de las figuras 2 y 3, la imagen documenta el alcance departamental de ambas visualizaciones.
